@@ -11,7 +11,7 @@ func _ready() -> void:
 		if marker:
 			var boatNode = boatscene.instantiate()
 			boatNode.position = marker.position
-			boatNode.init(playerData[player]["device"], player)
+			boatNode.init(playerData[player]["device"], player, playerData[player]["skin"])
 			add_child(boatNode)
 			boatNode.add_to_group("boat")
 		else:

@@ -41,7 +41,8 @@ func _ready():
 	speed_boost_timer.timeout.connect(_on_speed_boost_timer_timeout)
 	add_child(speed_boost_timer)
 	
-func init(lInputDevice, lPlayer):
+func init(lInputDevice, lPlayer, lAnimatedTexture: String):
+	var spriteframe = load(lAnimatedTexture)
 	inputDevice = DeviceInput.new(lInputDevice)
 	player = lPlayer
 	#print(name)
@@ -58,6 +59,8 @@ func init(lInputDevice, lPlayer):
 	# health management
 	is_alive = true
 	current_health = MAX_HEALTH
+	
+	$sprite_animation.sprite_frames = spriteframe
 	
 	
 	
@@ -286,4 +289,3 @@ func _on_speed_boost_timer_timeout():
 func set_speed(speed: float):
 	current_speed = speed
 	friction = BASE_ACCELERATION / current_speed
-
