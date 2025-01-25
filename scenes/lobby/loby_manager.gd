@@ -17,7 +17,7 @@ func _ready() -> void:
 var player_data: Dictionary = {}
 
 const MAX_PLAYERS = 4
-const MIN_PLAYERS = 2
+const MIN_PLAYERS = 1
 
 func join(device: int):
 	var player = next_player()

@@ -13,6 +13,7 @@ func _ready() -> void:
 			boatNode.position = marker.position
 			boatNode.init(playerData[player]["device"], player)
 			add_child(boatNode)
+			boatNode.add_to_group("boat")
 		else:
 			print("Marker not found for player %d" % player)
 

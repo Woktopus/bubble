@@ -197,3 +197,6 @@ func get_play_id()->int:
 
 func manage_bubble_hit()->void:
 	print('outch')
+
+func get_power_up(type):
+	print("j'ai choppeer un buff")

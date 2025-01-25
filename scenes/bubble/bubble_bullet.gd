@@ -39,7 +39,7 @@ func bubble_explode() -> void:
 
 
 func _on_body_entered(body: Node2D) -> void:
-	if "Boat" in body.name :
+	if "boat" in body.get_groups():
 		
 		print("========================")
 		prints("owner id %s ", player_owner)
@@ -48,4 +48,6 @@ func _on_body_entered(body: Node2D) -> void:
 		if body.get_play_id() != player_owner:
 			queue_free()
 			body.manage_bubble_hit()
-		#print(state_alive)
+	else:
+		print("untracked collision bubble")
+		queue_free()
