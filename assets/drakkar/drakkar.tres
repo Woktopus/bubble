@@ -1,6 +1,6 @@
 [gd_resource type="SpriteFrames" load_steps=12 format=3 uid="uid://dbwphjfroe57r"]
 
-[ext_resource type="Texture2D" uid="uid://ccrvtcbpy8uar" path="res://assets/drakkar/drakkar trop stylé.png" id="1_xxxkh"]
+[ext_resource type="Texture2D" uid="uid://ccrvtcbpy8uar" path="res://assets/drakkar/drakkar.png" id="1_xxxkh"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8pwuv"]
 atlas = ExtResource("1_xxxkh")
