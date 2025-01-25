@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ohy2bby3mhsx"
-path="res://.godot/imported/plongeoir.png-266418ca46df71347dab66785395fc8c.ctex"
+uid="uid://crwh12bube88y"
+path="res://.godot/imported/Menu-export.png-0934d86413a109b9c6ca9b860676a57c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/plongeoir.png"
-dest_files=["res://.godot/imported/plongeoir.png-266418ca46df71347dab66785395fc8c.ctex"]
+source_file="res://assets/Menu-export.png"
+dest_files=["res://.godot/imported/Menu-export.png-0934d86413a109b9c6ca9b860676a57c.ctex"]
 
 [params]
 

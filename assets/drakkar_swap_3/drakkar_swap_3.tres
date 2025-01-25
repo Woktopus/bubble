@@ -1,50 +1,101 @@
-[gd_resource type="SpriteFrames" load_steps=6 format=3 uid="uid://cu2ehoq7qpu78"]
+[gd_resource type="SpriteFrames" load_steps=12 format=3 uid="uid://cu2ehoq7qpu78"]
 
-[ext_resource type="Texture2D" uid="uid://ddbyvjowy1dm2" path="res://assets/canard noir/canard_noir_2.png" id="1_bvfmj"]
-[ext_resource type="Texture2D" uid="uid://balcby884q0kp" path="res://assets/canard noir/canard_noir_5.png" id="2_ojr11"]
-[ext_resource type="Texture2D" uid="uid://dv2jo1cgujs4b" path="res://assets/canard noir/canard_noir_1.png" id="3_ica6d"]
-[ext_resource type="Texture2D" uid="uid://dreem1pojpn4g" path="res://assets/canard noir/canard_noir_4.png" id="4_idrj3"]
-[ext_resource type="Texture2D" uid="uid://c45oybtyrkets" path="res://assets/canard noir/canard_noir_3.png" id="5_i3nla"]
+[ext_resource type="Texture2D" uid="uid://ckqkxfyfwoa6b" path="res://assets/drakkar_swap_3/drakkar trop stylé - color swap 3.png" id="1_2vraw"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mr3er"]
+atlas = ExtResource("1_2vraw")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_chmqm"]
+atlas = ExtResource("1_2vraw")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hh220"]
+atlas = ExtResource("1_2vraw")
+region = Rect2(256, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3rw30"]
+atlas = ExtResource("1_2vraw")
+region = Rect2(288, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w7s7h"]
+atlas = ExtResource("1_2vraw")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jvy6s"]
+atlas = ExtResource("1_2vraw")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4ea1k"]
+atlas = ExtResource("1_2vraw")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eal78"]
+atlas = ExtResource("1_2vraw")
+region = Rect2(224, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vot0w"]
+atlas = ExtResource("1_2vraw")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_47cd0"]
+atlas = ExtResource("1_2vraw")
+region = Rect2(96, 0, 32, 32)
 
 [resource]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_bvfmj")
+"texture": SubResource("AtlasTexture_mr3er")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_chmqm")
 }],
 "loop": true,
 "name": &"down",
-"speed": 5.0
+"speed": 4.0
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_ojr11")
+"texture": SubResource("AtlasTexture_hh220")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3rw30")
 }],
 "loop": true,
 "name": &"left_up",
-"speed": 5.0
+"speed": 4.0
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("3_ica6d")
+"texture": SubResource("AtlasTexture_w7s7h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jvy6s")
 }],
 "loop": true,
 "name": &"right",
-"speed": 5.0
+"speed": 4.0
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("4_idrj3")
+"texture": SubResource("AtlasTexture_4ea1k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eal78")
 }],
 "loop": true,
 "name": &"right_down",
-"speed": 5.0
+"speed": 4.0
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("5_i3nla")
+"texture": SubResource("AtlasTexture_vot0w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_47cd0")
 }],
 "loop": true,
 "name": &"up",
-"speed": 5.0
+"speed": 4.0
 }]

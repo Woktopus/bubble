@@ -32,6 +32,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	# check player health
 	var id_winner = check_players_state()
+	id_winner =-1 #todelete
 	if id_winner != -1 && isResetNotTimerLaunched: 
 		var id_display_winner = id_winner+1
 		var txt_winner = "Joueur "+str(id_display_winner)+" a gagné !! Reset dans 10 secondes"
