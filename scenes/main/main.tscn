@@ -1,9 +1,10 @@
-[gd_scene load_steps=12 format=3 uid="uid://bmau1vr8akkpp"]
+[gd_scene load_steps=13 format=3 uid="uid://bmau1vr8akkpp"]
 
 [ext_resource type="Texture2D" uid="uid://c6kqboj4yhlom" path="res://scenes/main/Screenshot-2021-12-28-122056.png" id="1_hynuu"]
 [ext_resource type="Shader" path="res://water.gdshader" id="1_tfryt"]
 [ext_resource type="Texture2D" uid="uid://b55q0eiqwsa6l" path="res://summer-swimming-pool-top-view-background-free-vector.png" id="3_85fe7"]
 [ext_resource type="PackedScene" uid="uid://cd4gfi7gil2ix" path="res://scenes/boat/boat.tscn" id="4_irmve"]
+[ext_resource type="PackedScene" uid="uid://mjb5wt0n5qkt" path="res://scenes/powerup/powerup.tscn" id="5_7clre"]
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_drb20"]
 noise_type = 0
@@ -72,3 +73,6 @@ shape = SubResource("RectangleShape2D_twcly")
 [node name="Boat" parent="." instance=ExtResource("4_irmve")]
 position = Vector2(361, 307)
 scale = Vector2(0.5, 0.5)
+
+[node name="Powerup" parent="." instance=ExtResource("5_7clre")]
+position = Vector2(766, 248)
