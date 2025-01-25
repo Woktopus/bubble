@@ -2,13 +2,13 @@
 
 importer="wav"
 type="AudioStreamWAV"
-uid="uid://8vernyjpmdvy"
-path="res://.godot/imported/tir bubble.wav-6502948d9a7e241065d0bfe5d958b3b3.sample"
+uid="uid://ceaotlcpx7v83"
+path="res://.godot/imported/tir bulle.wav-10457565ed85f670f7c87724bbab160e.sample"
 
 [deps]
 
-source_file="res://sounds/tir bubble.wav"
-dest_files=["res://.godot/imported/tir bubble.wav-6502948d9a7e241065d0bfe5d958b3b3.sample"]
+source_file="res://sounds/tir bulle.wav"
+dest_files=["res://.godot/imported/tir bulle.wav-10457565ed85f670f7c87724bbab160e.sample"]
 
 [params]
 
