@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://bmau1vr8akkpp"]
+[gd_scene load_steps=19 format=3 uid="uid://bmau1vr8akkpp"]
 
 [ext_resource type="Script" path="res://scenes/main/main.gd" id="1_2h74v"]
 [ext_resource type="Texture2D" uid="uid://c6kqboj4yhlom" path="res://scenes/main/Screenshot-2021-12-28-122056.png" id="1_hynuu"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://mjb5wt0n5qkt" path="res://scenes/powerup/powerup.tscn" id="5_7clre"]
 [ext_resource type="Texture2D" uid="uid://5s5wfeejfdyq" path="res://assets/stage1/decors2-Sheet.png" id="5_wlp47"]
 [ext_resource type="Texture2D" uid="uid://ohy2bby3mhsx" path="res://assets/stage1/plongeoir.png" id="7_oft4c"]
+[ext_resource type="PackedScene" uid="uid://dkqeml1ukrwrk" path="res://scenes/interfaces/player_HUD.tscn" id="8_mfo83"]
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_drb20"]
 noise_type = 0
@@ -85,7 +86,7 @@ position = Vector2(33, 329)
 shape = SubResource("RectangleShape2D_qp0uu")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(594, 654)
+position = Vector2(594, 651)
 shape = SubResource("RectangleShape2D_k141s")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
@@ -116,3 +117,51 @@ z_index = 99
 position = Vector2(80, 423)
 scale = Vector2(2.3, 2.3)
 texture = ExtResource("7_oft4c")
+
+[node name="GUI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Player1Hud" parent="GUI" instance=ExtResource("8_mfo83")]
+layout_mode = 1
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 19.0
+offset_top = 11.0
+offset_right = 19.0
+offset_bottom = 11.0
+grow_horizontal = 1
+grow_vertical = 1
+
+[node name="Player2Hud" parent="GUI" instance=ExtResource("8_mfo83")]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_bottom = 0.0
+offset_left = 940.0
+offset_top = 8.0
+offset_right = 940.0
+offset_bottom = 8.0
+grow_horizontal = 0
+grow_vertical = 1
+
+[node name="Player3Hud" parent="GUI" instance=ExtResource("8_mfo83")]
+layout_mode = 1
+offset_left = 12.0
+offset_top = 571.0
+offset_right = 12.0
+offset_bottom = 571.0
+
+[node name="Player4Hud" parent="GUI" instance=ExtResource("8_mfo83")]
+layout_mode = 1
+offset_left = 943.0
+offset_top = 577.0
+offset_right = 943.0
+offset_bottom = 577.0

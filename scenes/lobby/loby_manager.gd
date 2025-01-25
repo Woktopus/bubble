@@ -26,7 +26,10 @@ func join(device: int):
 		player_data[player] = {
 			"device": device,
 			"team":0,
-			"skin":"duck",
+			#"skin":"duck",
+			"skin":"res://assets/canard/sprite_frame_canard.tres",
+			"icone":"res://assets/canard/Sprite-0001-Sheet.png"
+			# load("res://assets/canard/sprite_frame_canard.tres")
 		}
 		player_joined.emit(player)
 
@@ -60,6 +63,9 @@ func set_player_data(player: int, key: StringName, value: Variant):
 func set_player_skin(player: int, skin: String):
 	set_player_data(player, "skin", skin)
 	$kwaksound.play()
+
+func set_player_icone(player: int, icone: String):
+	set_player_data(player, "icone", icone)
 
 
 func handle_join_input():

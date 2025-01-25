@@ -56,6 +56,7 @@ func switch_skin(direction: int) -> void:
 	
 	# Update the player's skin data in the lobby manager
 	loby_manager.set_player_skin(player, skins[current_skin_index]["sprite"].resource_path)
+	loby_manager.set_player_icone(player, skins[current_skin_index]["selection"].resource_path)
 
 func reset() -> void:
 	player = -1
