@@ -1,0 +1,101 @@
+[gd_resource type="SpriteFrames" load_steps=12 format=3 uid="uid://78kswin8rf3l"]
+
+[ext_resource type="Texture2D" uid="uid://cd34cpve12hft" path="res://assets/paperboat_red/paperboat_red.png" id="1_yw5id"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2rwld"]
+atlas = ExtResource("1_yw5id")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mksxt"]
+atlas = ExtResource("1_yw5id")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ob04s"]
+atlas = ExtResource("1_yw5id")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kqwex"]
+atlas = ExtResource("1_yw5id")
+region = Rect2(224, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mk8v6"]
+atlas = ExtResource("1_yw5id")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pp501"]
+atlas = ExtResource("1_yw5id")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jaq2p"]
+atlas = ExtResource("1_yw5id")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pdsvt"]
+atlas = ExtResource("1_yw5id")
+region = Rect2(224, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rmpey"]
+atlas = ExtResource("1_yw5id")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gamq0"]
+atlas = ExtResource("1_yw5id")
+region = Rect2(96, 0, 32, 32)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2rwld")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mksxt")
+}],
+"loop": true,
+"name": &"down",
+"speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ob04s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kqwex")
+}],
+"loop": true,
+"name": &"left_up",
+"speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mk8v6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pp501")
+}],
+"loop": true,
+"name": &"right",
+"speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jaq2p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pdsvt")
+}],
+"loop": true,
+"name": &"right_down",
+"speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rmpey")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gamq0")
+}],
+"loop": true,
+"name": &"up",
+"speed": 4.0
+}]
