@@ -73,15 +73,3 @@ shape = SubResource("RectangleShape2D_twcly")
 
 [node name="Powerup" parent="." instance=ExtResource("5_7clre")]
 position = Vector2(766, 248)
-
-[node name="markerp1" type="Marker2D" parent="."]
-position = Vector2(986, 172)
-
-[node name="markerp2" type="Marker2D" parent="."]
-position = Vector2(960, 499)
-
-[node name="markerp3" type="Marker2D" parent="."]
-position = Vector2(168, 481)
-
-[node name="markerp4" type="Marker2D" parent="."]
-position = Vector2(159, 153)

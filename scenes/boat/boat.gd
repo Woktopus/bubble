@@ -15,13 +15,21 @@ var can_fire : bool = true
 
 var bubble_bullet_scene = preload("res://scenes/bubble/bubble_bullet.tscn")
 
+var player:int = -1
+var inputDevice
+
 func _ready():
 	fire_timer.connect("timeout", set_can_fire)
-	fire_timer.wait_time = fire_rate  
+	fire_timer.wait_time = fire_rate
+	
+func init(lInputDevice, lPlayer):
+	inputDevice = DeviceInput.new(lInputDevice)
+	player = lPlayer
+	
 
 func get_input():
-	input.x = Input.get_action_strength("player_right") - Input.get_action_strength("player_left")
-	input.y = Input.get_action_strength("player_down") - Input.get_action_strength("player_up")
+	input.x = inputDevice.get_action_strength("player_right") - inputDevice.get_action_strength("player_left")
+	input.y = inputDevice.get_action_strength("player_down") - inputDevice.get_action_strength("player_up")
 	return input.normalized()
 
 func _process(delta: float) -> void:
@@ -106,8 +114,8 @@ func set_direction_animation()->void:
 			boat_orientation = "left"
 		
 func manage_shooting_bubble()-> void:
-	var state_left_trigger = Input.get_action_strength("player_fire_left")
-	var state_right_trigger = Input.get_action_strength("player_fire_right")
+	var state_left_trigger = inputDevice.get_action_strength("player_fire_left")
+	var state_right_trigger = inputDevice.get_action_strength("player_fire_right")
 	
 	if can_fire and (state_left_trigger > 0 or state_right_trigger > 0)  : 
 		if state_left_trigger >= state_right_trigger :
