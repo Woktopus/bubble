@@ -1,0 +1,50 @@
+[gd_resource type="SpriteFrames" load_steps=6 format=3 uid="uid://b15j8tj8606to"]
+
+[ext_resource type="Texture2D" uid="uid://ddbyvjowy1dm2" path="res://assets/canard noir/canard_noir_2.png" id="1_3epgm"]
+[ext_resource type="Texture2D" uid="uid://balcby884q0kp" path="res://assets/canard noir/canard_noir_5.png" id="2_uujrf"]
+[ext_resource type="Texture2D" uid="uid://dv2jo1cgujs4b" path="res://assets/canard noir/canard_noir_1.png" id="3_hvjxf"]
+[ext_resource type="Texture2D" uid="uid://dreem1pojpn4g" path="res://assets/canard noir/canard_noir_4.png" id="4_7tns1"]
+[ext_resource type="Texture2D" uid="uid://c45oybtyrkets" path="res://assets/canard noir/canard_noir_3.png" id="5_vo7y5"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_3epgm")
+}],
+"loop": true,
+"name": &"down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_uujrf")
+}],
+"loop": true,
+"name": &"left_up",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_hvjxf")
+}],
+"loop": true,
+"name": &"right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_7tns1")
+}],
+"loop": true,
+"name": &"right_down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_vo7y5")
+}],
+"loop": true,
+"name": &"up",
+"speed": 5.0
+}]

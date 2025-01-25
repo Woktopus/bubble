@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dehjb3hr08wks"
-path="res://.godot/imported/colvert_3.png-efe2aeff79bec1c053ca5622e31dc92a.ctex"
+uid="uid://p64cqgjudxgy"
+path="res://.godot/imported/jetonboat_heal.png-6fe132c31d98816ba613fcabd76cead6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/colvert_3.png"
-dest_files=["res://.godot/imported/colvert_3.png-efe2aeff79bec1c053ca5622e31dc92a.ctex"]
+source_file="res://assets/powerup/jetonboat_heal.png"
+dest_files=["res://.godot/imported/jetonboat_heal.png-6fe132c31d98816ba613fcabd76cead6.ctex"]
 
 [params]
 

@@ -8,7 +8,7 @@ var is_initialized:bool = false
 var leave_check_delay:float = 0.5  # Delay in seconds before checking for leave action
 var time_since_init:float = 0.0
 
-var skins = []  # Array to hold the skin textures
+var skins = []  # Array to hold the skin data
 var current_skin_index = 0  # Index to track the current skin
 
 # Reference to the lobby manager
@@ -16,24 +16,23 @@ var current_skin_index = 0  # Index to track the current skin
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	# Load all skin textures into the skins array
-	skins.append(load("res://assets/canard/Sprite-0001-Sheet.png"))
-	skins.append(load("res://assets/selection_canard_swap_1.png"))
-	skins.append(load("res://assets/selection_canard_swap_2.png"))
-	skins.append(load("res://assets/canard pirate/Sprite-0001-Shee22t.png"))
-	skins.append(load("res://assets/selection_drakkar_swap_1.png"))
-	skins.append(load("res://assets/selection_drakkar_swap_2.png"))
-	skins.append(load("res://assets/selection_drakkar_swap_3.png"))
+	# Load all skin data into the skins array
+	skins.append({"selection": load("res://assets/canard/Sprite-0001-Sheet.png"), "sprite": load("res://assets/canard/sprite_frame_canard.tres")})
+	skins.append({"selection": load("res://assets/selection_canard_swap_1.png"), "sprite": load("res://assets/canard noir/sprite_frame_canard_noir.tres")})
+	skins.append({"selection": load("res://assets/drakkar/drakakr.png"), "sprite": load("res://assets/drakkar/drakkar.tres")})
+	skins.append({"selection": load("res://assets/selection_canard_swap_2.png"), "sprite": load("res://assets/canard colvert/sprite_frame_canard_colvert.tres")})
+	skins.append({"selection": load("res://assets/canard pirate/Sprite-0001-Shee22t.png"), "sprite": load("res://assets/canard pirate/sprite_frame_canard_pirate.tres")})
+	skins.append({"selection": load("res://assets/selection_drakkar_swap_2.png"), "sprite":load("res://assets/canard/sprite_frame_canard.tres")})
+	skins.append({"selection": load("res://assets/selection_drakkar_swap_3.png"), "sprite": load("res://assets/canard/sprite_frame_canard.tres")})
 
 	# Add more skins as needed
-
 
 func init(player_num:int, device:int):
 	player = player_num
 	input = DeviceInput.new(device)
 	is_initialized = true
 	time_since_init = 0.0
-	$TextureRect.texture = skins[current_skin_index]  # Set the initial skin
+	$TextureRect.texture = skins[current_skin_index]["selection"]  # Set the initial skin
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -53,10 +52,10 @@ func switch_skin(direction: int) -> void:
 	current_skin_index = (current_skin_index + direction) % skins.size()
 	if current_skin_index < 0:
 		current_skin_index = skins.size() - 1
-	$TextureRect.texture = skins[current_skin_index]
+	$TextureRect.texture = skins[current_skin_index]["selection"]
 	
 	# Update the player's skin data in the lobby manager
-	loby_manager.set_player_skin(player, skins[current_skin_index].resource_path)
+	loby_manager.set_player_skin(player, skins[current_skin_index]["sprite"].resource_path)
 
 func reset() -> void:
 	player = -1

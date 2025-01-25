@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c7ctbgmgmxakc"
-path="res://.godot/imported/colvert_1.png-ed08295ec1af710f73c353e471bfe908.ctex"
+uid="uid://dw8nn0wh83kr5"
+path="res://.godot/imported/jetonbulle figée.png-1d39517a78a527c90fd7b590c6035014.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/colvert_1.png"
-dest_files=["res://.godot/imported/colvert_1.png-ed08295ec1af710f73c353e471bfe908.ctex"]
+source_file="res://assets/powerup/jetonbulle figée.png"
+dest_files=["res://.godot/imported/jetonbulle figée.png-1d39517a78a527c90fd7b590c6035014.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://pe0fb7sdrw7x"
-path="res://.godot/imported/drakkar trop stylé - color swap 1.png-e3c6aa87843c4d7d435a430721090371.ctex"
+uid="uid://dm1naqkc2nluq"
+path="res://.godot/imported/old_jetonboat.png-534a02d81df67b38f055536cd5a6a135.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/drakkar trop stylé - color swap 1.png"
-dest_files=["res://.godot/imported/drakkar trop stylé - color swap 1.png-e3c6aa87843c4d7d435a430721090371.ctex"]
+source_file="res://assets/powerup/old_jetonboat.png"
+dest_files=["res://.godot/imported/old_jetonboat.png-534a02d81df67b38f055536cd5a6a135.ctex"]
 
 [params]
 

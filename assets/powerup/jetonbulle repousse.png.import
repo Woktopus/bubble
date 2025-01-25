@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ceuvl8vsu4deu"
-path="res://.godot/imported/colvert_4.png-ce080525e3fc2357047616c84f79542c.ctex"
+uid="uid://05uxpu0d30ly"
+path="res://.godot/imported/jetonbulle repousse.png-6553addde508d2466481f34a8619f605.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/colvert_4.png"
-dest_files=["res://.godot/imported/colvert_4.png-ce080525e3fc2357047616c84f79542c.ctex"]
+source_file="res://assets/powerup/jetonbulle repousse.png"
+dest_files=["res://.godot/imported/jetonbulle repousse.png-6553addde508d2466481f34a8619f605.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dlf0jyr0ex8t8"
-path="res://.godot/imported/colvert_2.png-b1fe73eeabac2029ad4fa0392d618bc9.ctex"
+uid="uid://bbd321r41qol6"
+path="res://.godot/imported/jetonbulle ralenti.png-ff0c0252b558d1fa513769d2b598d371.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/colvert_2.png"
-dest_files=["res://.godot/imported/colvert_2.png-b1fe73eeabac2029ad4fa0392d618bc9.ctex"]
+source_file="res://assets/powerup/jetonbulle ralenti.png"
+dest_files=["res://.godot/imported/jetonbulle ralenti.png-ff0c0252b558d1fa513769d2b598d371.ctex"]
 
 [params]
 

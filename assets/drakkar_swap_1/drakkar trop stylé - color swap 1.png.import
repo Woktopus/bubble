@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bu812j7k06i2h"
-path="res://.godot/imported/colvert_5.png-fc3aa171c6b531597b8370c3a0a164dc.ctex"
+uid="uid://pe0fb7sdrw7x"
+path="res://.godot/imported/drakkar trop stylé - color swap 1.png-19845a0bbe6c7792506b8f9ccdc474d1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/colvert_5.png"
-dest_files=["res://.godot/imported/colvert_5.png-fc3aa171c6b531597b8370c3a0a164dc.ctex"]
+source_file="res://assets/drakkar_swap_1/drakkar trop stylé - color swap 1.png"
+dest_files=["res://.godot/imported/drakkar trop stylé - color swap 1.png-19845a0bbe6c7792506b8f9ccdc474d1.ctex"]
 
 [params]
 
