@@ -4,13 +4,13 @@
 [ext_resource type="SpriteFrames" uid="uid://cd7jff1ed1ski" path="res://assets/canard/sprite_frame_canard.tres" id="2_src47"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_rd0qi"]
-radius = 70.1142
+radius = 20.2237
 
 [node name="Boat" type="CharacterBody2D"]
 script = ExtResource("1_nwkhy")
 
 [node name="sprite_animation" type="AnimatedSprite2D" parent="."]
-scale = Vector2(9, 8.59)
+scale = Vector2(3, 3)
 sprite_frames = ExtResource("2_src47")
 animation = &"left_up"
 metadata/_edit_lock_ = true
