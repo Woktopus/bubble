@@ -286,4 +286,3 @@ func _on_speed_boost_timer_timeout():
 func set_speed(speed: float):
 	current_speed = speed
 	friction = BASE_ACCELERATION / current_speed
-

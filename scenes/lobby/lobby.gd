@@ -8,6 +8,7 @@ extends Node
 var player_nodes = {}
 
 func _ready():
+	GameData.reset_all()
 	loby_manager.player_joined.connect(spawn_player)
 	loby_manager.player_left.connect(delete_player)
 
