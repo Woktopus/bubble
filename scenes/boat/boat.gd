@@ -7,6 +7,7 @@ const INVU_TIME = 0.5
 const KNOCKBACK_POWER = 500
 const MAX_HEALTH = 4
 
+var current_speed: float = BASE_SPEED
 var friction : float = BASE_ACCELERATION / BASE_SPEED
 var input : Vector2
 var boat_orientation : String
@@ -28,11 +29,17 @@ var inputDevice
 # gestion frame d'invu 
 var invu_timer = Timer.new()
 var is_invu = false
+var speed_boost_timer: Timer
 
 
 func _ready():
 	fire_timer.connect("timeout", set_can_fire)
 	fire_timer.wait_time = fire_rate
+
+	speed_boost_timer = Timer.new()
+	speed_boost_timer.one_shot = true
+	speed_boost_timer.timeout.connect(_on_speed_boost_timer_timeout)
+	add_child(speed_boost_timer)
 	
 func init(lInputDevice, lPlayer):
 	inputDevice = DeviceInput.new(lInputDevice)
@@ -72,7 +79,7 @@ func _process(delta: float) -> void:
 
 func apply_traction(delta: float)-> void:
 	var traction = get_input()
-	velocity += traction * BASE_ACCELERATION  * delta
+	velocity += traction * current_speed * delta
 	
 func apply_friction(delta: float)-> void:
 	velocity -= velocity * friction * delta
@@ -231,8 +238,6 @@ func manage_bubble_hit()->void:
 		# send signal to update hud ??
 		
 
-func get_power_up(type):
-	print("j'ai choppeer un buff")
 
 func manage_alive_state ()-> void :
 	if is_alive:
@@ -245,3 +250,40 @@ func get_player_health()->int:
 
 func _on_invu_timer_timeout():
 	is_invu = false
+
+func get_power_up(type):    
+	if(type == GameData.PowerType.BUBBLE):
+		bubble_powerup()
+	elif(type == GameData.PowerType.BOAT):
+		boat_powerup()
+	else:
+		print("Invalid power up type")
+
+func bubble_powerup():
+	pass
+
+func boat_powerup():
+	var power_ups = ["speed_boost"]
+	var random_index = randi() % power_ups.size()
+	var selected_power_up = power_ups[random_index]
+
+	match selected_power_up:
+		"speed_boost":
+			apply_speed_boost()
+		"default":
+			print("Invalid power up")
+
+
+func apply_speed_boost():
+	print("Speed boost applied")
+	set_speed(5000)
+	speed_boost_timer.start(5.0)
+
+func _on_speed_boost_timer_timeout():
+	print("Speed boost expired")
+	set_speed(BASE_SPEED)
+
+func set_speed(speed: float):
+	current_speed = speed
+	friction = BASE_ACCELERATION / current_speed
+
