@@ -1,0 +1,50 @@
+[gd_resource type="SpriteFrames" load_steps=6 format=3 uid="uid://cd7jff1ed1ski"]
+
+[ext_resource type="Texture2D" uid="uid://wvemjganfc64" path="res://assets/canard/Sprite-0002-Sheet.png" id="1_b5cn8"]
+[ext_resource type="Texture2D" uid="uid://tx7de1ic2vp1" path="res://assets/canard/Sprite-0008-Sheet.png" id="2_t03gs"]
+[ext_resource type="Texture2D" uid="uid://bkibep4l3c7nj" path="res://assets/canard/Sprite-0001-Sheet.png" id="3_sg4gn"]
+[ext_resource type="Texture2D" uid="uid://b6eriyad31cx0" path="res://assets/canard/Sprite-0006-Sheet.png" id="4_e0hj0"]
+[ext_resource type="Texture2D" uid="uid://b0445lycvqtb0" path="res://assets/canard/Sprite-0005-Sheet.png" id="5_5h6wg"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_b5cn8")
+}],
+"loop": true,
+"name": &"down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_t03gs")
+}],
+"loop": true,
+"name": &"left_up",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_sg4gn")
+}],
+"loop": true,
+"name": &"right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_e0hj0")
+}],
+"loop": true,
+"name": &"right_down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_5h6wg")
+}],
+"loop": true,
+"name": &"up",
+"speed": 5.0
+}]

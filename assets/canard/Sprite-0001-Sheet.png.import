@@ -15,7 +15,7 @@ dest_files=["res://.godot/imported/Sprite-0001-Sheet.png-829abc47b96ab36d06d3c4b
 
 [params]
 
-compress/mode=0
+compress/mode=1
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
