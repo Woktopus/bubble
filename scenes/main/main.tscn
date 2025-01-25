@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://bmau1vr8akkpp"]
+[gd_scene load_steps=14 format=3 uid="uid://bmau1vr8akkpp"]
 
 [ext_resource type="Script" path="res://scenes/main/main.gd" id="1_2h74v"]
 [ext_resource type="Texture2D" uid="uid://c6kqboj4yhlom" path="res://scenes/main/Screenshot-2021-12-28-122056.png" id="1_hynuu"]
@@ -6,7 +6,6 @@
 [ext_resource type="Texture2D" uid="uid://nug850bp4b7x" path="res://assets/stage1/waterstg1.png" id="2_uoinm"]
 [ext_resource type="PackedScene" uid="uid://mjb5wt0n5qkt" path="res://scenes/powerup/powerup.tscn" id="5_7clre"]
 [ext_resource type="Texture2D" uid="uid://de0x0jy83c830" path="res://assets/stage1/decorstg1.png" id="5_gxe4w"]
-[ext_resource type="PackedScene" uid="uid://b04a65tqnnypo" path="res://scenes/interfaces/winner_panel.tscn" id="7_n1g76"]
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_drb20"]
 noise_type = 0
@@ -87,17 +86,3 @@ position = Vector2(168, 481)
 
 [node name="markerp4" type="Marker2D" parent="."]
 position = Vector2(159, 153)
-
-[node name="WinnerPanel" parent="." instance=ExtResource("7_n1g76")]
-visible = false
-layout_direction = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 599.0
-offset_top = 306.0
-offset_right = 599.0
-offset_bottom = 306.0
-metadata/_edit_use_anchors_ = true
