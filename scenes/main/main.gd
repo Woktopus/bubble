@@ -11,7 +11,7 @@ func _ready() -> void:
 		if marker:
 			var boatNode = boatscene.instantiate()
 			boatNode.position = marker.position
-			boatNode.init(player, playerData[player]["device"])
+			boatNode.init(playerData[player]["device"], player)
 			add_child(boatNode)
 		else:
 			print("Marker not found for player %d" % player)

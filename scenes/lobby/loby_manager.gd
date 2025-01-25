@@ -7,6 +7,10 @@ extends Node
 signal player_joined(player)
 signal player_left(player)
 
+func _ready() -> void:
+	$AudioStreamPlayer.play()
+
+
 # map from player integer to dictionary of data
 # the existence of a key in this dictionary means this player is joined.
 # use get_player_data() and set_player_data() to use this dictionary.
@@ -55,6 +59,7 @@ func set_player_data(player: int, key: StringName, value: Variant):
 
 func set_player_skin(player: int, skin: String):
 	set_player_data(player, "skin", skin)
+	$kwaksound.play()
 
 
 func handle_join_input():
