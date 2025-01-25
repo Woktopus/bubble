@@ -20,4 +20,19 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	# check player health
+	#var boats = get_tree().get_nodes_in_group("boat")
 	pass
+
+# return id player who win or -1
+func check_players_state() -> int :
+	var return_value = -1
+	var boats = get_tree().get_nodes_in_group("boat")
+	for boat in boats :
+		pass
+	
+	
+	return return_value
+	
+	
+	

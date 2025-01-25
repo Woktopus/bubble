@@ -3,10 +3,17 @@ class_name Player
 
 const BASE_SPEED = 500.0
 const BASE_ACCELERATION = 200.0
+const INVU_TIME = 0.5
+const KNOCKBACK_POWER = 500
+const MAX_HEALTH = 4
 
 var friction : float = BASE_ACCELERATION / BASE_SPEED
 var input : Vector2
 var boat_orientation : String
+
+# player life management 
+var current_health : int
+var is_alive : bool
 
 # shoot management 
 @onready var fire_timer = $FireTimer
@@ -17,6 +24,11 @@ var bubble_bullet_scene = preload("res://scenes/bubble/bubble_bullet.tscn")
 
 var player:int = -1
 var inputDevice
+
+# gestion frame d'invu 
+var invu_timer = Timer.new()
+var is_invu = false
+
 
 func _ready():
 	fire_timer.connect("timeout", set_can_fire)
@@ -31,6 +43,15 @@ func init(lInputDevice, lPlayer):
 	prints("player name", name)
 	print("=================")
 	
+	# INVU Frame
+	add_child(invu_timer)
+	invu_timer.timeout.connect(_on_invu_timer_timeout)
+	invu_timer.set_one_shot(true)
+	
+	# health management
+	is_alive = true
+	current_health = MAX_HEALTH
+	
 	
 	
 
@@ -40,11 +61,13 @@ func get_input():
 	return input.normalized()
 
 func _process(delta: float) -> void:
-	apply_traction(delta)
-	apply_friction(delta)
-	set_direction_animation()
-	manage_shooting_bubble()
-	move_and_slide()
+	manage_alive_state()
+	if is_alive:
+		apply_traction(delta)
+		apply_friction(delta)
+		set_direction_animation()
+		manage_shooting_bubble()
+		move_and_slide()
 
 
 func apply_traction(delta: float)-> void:
@@ -197,6 +220,28 @@ func get_play_id()->int:
 
 func manage_bubble_hit()->void:
 	print('outch')
+	if not is_invu:
+		is_invu = true
+		invu_timer.start(INVU_TIME)
+
+		# manage knockback
+		
+		# manage damage
+		current_health -= 1
+		# send signal to update hud ??
+		
 
 func get_power_up(type):
 	print("j'ai choppeer un buff")
+
+func manage_alive_state ()-> void :
+	if is_alive:
+		if current_health <= 0 :
+			is_alive = false
+			$sprite_animation.visible=false
+
+func get_player_health()->int:
+	return current_health
+
+func _on_invu_timer_timeout():
+	is_invu = false

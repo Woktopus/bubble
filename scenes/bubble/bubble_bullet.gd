@@ -46,7 +46,7 @@ func _on_body_entered(body: Node2D) -> void:
 		prints("target id target %s", body.get_play_id())
 		print("========================")
 		if body.get_play_id() != player_owner:
-			queue_free()
+		queue_free()
 			body.manage_bubble_hit()
 	else:
 		print("untracked collision bubble")
