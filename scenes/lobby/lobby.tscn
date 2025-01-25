@@ -1,14 +1,24 @@
-[gd_scene load_steps=4 format=3 uid="uid://diaen2m1et70t"]
+[gd_scene load_steps=6 format=3 uid="uid://diaen2m1et70t"]
 
 [ext_resource type="Script" path="res://scenes/lobby/lobby.gd" id="1_lrhhc"]
 [ext_resource type="PackedScene" uid="uid://doka6pvyae620" path="res://scenes/lobby/lobby_player.tscn" id="2_peqk2"]
 [ext_resource type="Script" path="res://scenes/lobby/loby_manager.gd" id="2_tc88q"]
+[ext_resource type="AudioStream" uid="uid://c2b7koki55sn8" path="res://music/music lobby.mp3" id="4_kl2m6"]
+[ext_resource type="AudioStream" uid="uid://deh1w118xqad6" path="res://sounds/075176_duck-quack-40345.mp3" id="5_fip16"]
 
 [node name="Lobby" type="Node"]
 script = ExtResource("1_lrhhc")
 
 [node name="LobyManager" type="Node" parent="."]
 script = ExtResource("2_tc88q")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="LobyManager"]
+stream = ExtResource("4_kl2m6")
+volume_db = -10.291
+parameters/looping = true
+
+[node name="kwaksound" type="AudioStreamPlayer" parent="LobyManager"]
+stream = ExtResource("5_fip16")
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
