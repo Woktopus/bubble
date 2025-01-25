@@ -25,6 +25,13 @@ func _ready():
 func init(lInputDevice, lPlayer):
 	inputDevice = DeviceInput.new(lInputDevice)
 	player = lPlayer
+	#print(name)
+	print("=================")
+	prints("player id ", player)
+	prints("player name", name)
+	print("=================")
+	
+	
 	
 
 func get_input():
@@ -123,6 +130,7 @@ func manage_shooting_bubble()-> void:
 			can_fire = false
 			fire_timer.start()
 			var bubble_bullet = bubble_bullet_scene.instantiate()
+			bubble_bullet.setup_bubble(player)
 			bubble_bullet.position = global_position
 			bubble_bullet.direction = Vector2.RIGHT.rotated(deg_to_rad(get_angle_fire_bullet_left()))
 			get_parent().add_child(bubble_bullet)
@@ -132,6 +140,7 @@ func manage_shooting_bubble()-> void:
 			can_fire = false
 			fire_timer.start()
 			var bubble_bullet = bubble_bullet_scene.instantiate()
+			bubble_bullet.setup_bubble(player)
 			bubble_bullet.position = global_position
 			bubble_bullet.direction = Vector2.RIGHT.rotated(deg_to_rad(get_angle_fire_bullet_right()))
 			get_parent().add_child(bubble_bullet)
@@ -182,4 +191,9 @@ func get_angle_fire_bullet_right()->float:
 func set_can_fire() -> void:
 	can_fire = true
 	fire_timer.stop()
-	prints("Reset fire")
+	
+func get_play_id()->int:
+	return player
+
+func manage_bubble_hit()->void:
+	print('outch')
