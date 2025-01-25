@@ -25,6 +25,9 @@ func _ready() -> void:
 	skins.append({"selection": load("res://assets/selection_drakkar_swap_2.png"), "sprite":load("res://assets/drakkar_swap_2/drakkar_swap_2.tres")})
 	skins.append({"selection": load("res://assets/selection_drakkar_swap_3.png"), "sprite": load("res://assets/drakkar_swap_3/drakkar_swap_3.tres")})
 	skins.append({"selection": load("res://assets/selection_drakkar_swap_1.png"), "sprite": load("res://assets/drakkar_swap_1/drakkar_swap_1.tres")})
+	skins.append({"selection": load("res://assets/paperboat/selection_paperboat-Sheet.png"), "sprite": load("res://assets/paperboat/sprite_frame_paperboat.tres")})
+	skins.append({"selection": load("res://assets/paperboat_red/selection_paperboat_red.png"), "sprite": load("res://assets/paperboat_red/sprite_frame_paperboat_red.tres")})
+
 	# Add more skins as needed
 
 func init(player_num:int, device:int):
