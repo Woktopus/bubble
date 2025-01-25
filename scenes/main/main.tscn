@@ -71,3 +71,4 @@ shape = SubResource("RectangleShape2D_twcly")
 
 [node name="Boat" parent="." instance=ExtResource("4_irmve")]
 position = Vector2(361, 307)
+scale = Vector2(0.5, 0.5)
