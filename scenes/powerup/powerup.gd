@@ -14,6 +14,6 @@ func _ready() -> void:
 			$Sprite2D.texture = load("res://assets/powerup/explode.png")
 
 func on_powerup_body_entered(body):
-	if body.name == "Boat":  # Ensure it's the player
+	if "boat" in body.get_groups():
 		body.get_power_up(type)
 		queue_free()
