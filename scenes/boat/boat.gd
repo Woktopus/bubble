@@ -20,8 +20,8 @@ func _ready():
 	fire_timer.wait_time = fire_rate  
 
 func get_input():
-	input.x = Input.get_action_strength("player1_right") - Input.get_action_strength("player1_left")
-	input.y = Input.get_action_strength("player1_down") - Input.get_action_strength("player1_up")
+	input.x = Input.get_action_strength("player_right") - Input.get_action_strength("player_left")
+	input.y = Input.get_action_strength("player_down") - Input.get_action_strength("player_up")
 	return input.normalized()
 
 func _process(delta: float) -> void:
@@ -106,8 +106,8 @@ func set_direction_animation()->void:
 			boat_orientation = "left"
 		
 func manage_shooting_bubble()-> void:
-	var state_left_trigger = Input.get_action_strength("player1_fire_left")
-	var state_right_trigger = Input.get_action_strength("player1_fire_right")
+	var state_left_trigger = Input.get_action_strength("player_fire_left")
+	var state_right_trigger = Input.get_action_strength("player_fire_right")
 	
 	if can_fire and (state_left_trigger > 0 or state_right_trigger > 0)  : 
 		if state_left_trigger >= state_right_trigger :
