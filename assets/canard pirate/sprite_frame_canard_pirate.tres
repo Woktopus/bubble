@@ -1,16 +1,16 @@
 [gd_resource type="SpriteFrames" load_steps=6 format=3 uid="uid://c08v7yn1cc7rk"]
 
-[ext_resource type="Texture2D" uid="uid://ddbyvjowy1dm2" path="res://assets/canard noir/canard_noir_2.png" id="1_7oyv0"]
-[ext_resource type="Texture2D" uid="uid://balcby884q0kp" path="res://assets/canard noir/canard_noir_5.png" id="2_ksavx"]
-[ext_resource type="Texture2D" uid="uid://dv2jo1cgujs4b" path="res://assets/canard noir/canard_noir_1.png" id="3_m6m0x"]
-[ext_resource type="Texture2D" uid="uid://dreem1pojpn4g" path="res://assets/canard noir/canard_noir_4.png" id="4_6r75j"]
-[ext_resource type="Texture2D" uid="uid://c45oybtyrkets" path="res://assets/canard noir/canard_noir_3.png" id="5_27ga5"]
+[ext_resource type="Texture2D" uid="uid://coypooddkii41" path="res://assets/canard pirate/Sprite-0001-Shee22t77ss.png" id="1_skcto"]
+[ext_resource type="Texture2D" uid="uid://nqljlhebvfsx" path="res://assets/canard pirate/Sprite-0001-Shee22t77.png" id="2_85x4q"]
+[ext_resource type="Texture2D" uid="uid://c2hqpikncrk0" path="res://assets/canard pirate/Sprite-0001-Shee22t.png" id="3_ussoa"]
+[ext_resource type="Texture2D" uid="uid://bqvkrd2ed1t3w" path="res://assets/canard pirate/Sprite-0001-Shee22t7.png" id="4_r7f8x"]
+[ext_resource type="Texture2D" uid="uid://bcafbbn7afkuk" path="res://assets/canard pirate/Sprite-0001-Shee22t77ssss.png" id="5_8m7cs"]
 
 [resource]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_7oyv0")
+"texture": ExtResource("1_skcto")
 }],
 "loop": true,
 "name": &"down",
@@ -18,7 +18,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_ksavx")
+"texture": ExtResource("2_85x4q")
 }],
 "loop": true,
 "name": &"left_up",
@@ -26,7 +26,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("3_m6m0x")
+"texture": ExtResource("3_ussoa")
 }],
 "loop": true,
 "name": &"right",
@@ -34,7 +34,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("4_6r75j")
+"texture": ExtResource("4_r7f8x")
 }],
 "loop": true,
 "name": &"right_down",
@@ -42,7 +42,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("5_27ga5")
+"texture": ExtResource("5_8m7cs")
 }],
 "loop": true,
 "name": &"up",
