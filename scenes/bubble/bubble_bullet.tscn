@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://bla7vlyik6was"]
+
+[ext_resource type="Script" path="res://scenes/bubble/bubble_bullet.gd" id="1_vhs3v"]
+[ext_resource type="SpriteFrames" uid="uid://34fnjsme22us" path="res://assets/bubbles/bubble_bullet/bubble_bullet.tres" id="1_w1eyh"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_cthqo"]
+radius = 20.8806
+
+[node name="BubbleBullet" type="Area2D"]
+script = ExtResource("1_vhs3v")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(3, 3)
+sprite_frames = ExtResource("1_w1eyh")
+animation = &"iddle"
+autoplay = "iddle"
+frame = 3
+frame_progress = 0.413464
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+shape = SubResource("CircleShape2D_cthqo")
