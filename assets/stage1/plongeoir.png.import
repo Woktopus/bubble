@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://5s5wfeejfdyq"
-path="res://.godot/imported/decors2-Sheet.png-1a87121ef3e6f22ce705d6bca7d9040a.ctex"
+uid="uid://ohy2bby3mhsx"
+path="res://.godot/imported/plongeoir.png-163d1729ed84203224df8c126e61bde0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/decors2-Sheet.png"
-dest_files=["res://.godot/imported/decors2-Sheet.png-1a87121ef3e6f22ce705d6bca7d9040a.ctex"]
+source_file="res://assets/stage1/plongeoir.png"
+dest_files=["res://.godot/imported/plongeoir.png-163d1729ed84203224df8c126e61bde0.ctex"]
 
 [params]
 
