@@ -19,9 +19,9 @@ func _ready() -> void:
 	# Load all skin data into the skins array
 	skins.append({"selection": load("res://assets/canard/Sprite-0001-Sheet.png"), "sprite": load("res://assets/canard/sprite_frame_canard.tres")})
 	skins.append({"selection": load("res://assets/selection_canard_swap_1.png"), "sprite": load("res://assets/canard noir/sprite_frame_canard_noir.tres")})
-	skins.append({"selection": load("res://assets/selection_canard_swap_2.png"), "sprite": load("res://assets/canard/sprite_frame_canard.tres")})
-	skins.append({"selection": load("res://assets/canard pirate/Sprite-0001-Shee22t.png"), "sprite": load("res://assets/canard/sprite_frame_canard.tres")})
 	skins.append({"selection": load("res://assets/selection_drakkar_swap_1.png"), "sprite": load("res://assets/drakkar/drakkar.tres")})
+	skins.append({"selection": load("res://assets/selection_canard_swap_2.png"), "sprite": load("res://assets/canard colvert/sprite_frame_canard_colvert.tres")})
+	skins.append({"selection": load("res://assets/canard pirate/Sprite-0001-Shee22t.png"), "sprite": load("res://assets/canard pirate/sprite_frame_canard_pirate.tres")})
 	skins.append({"selection": load("res://assets/selection_drakkar_swap_2.png"), "sprite":load("res://assets/canard/sprite_frame_canard.tres")})
 	skins.append({"selection": load("res://assets/selection_drakkar_swap_3.png"), "sprite": load("res://assets/canard/sprite_frame_canard.tres")})
 
