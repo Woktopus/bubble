@@ -168,7 +168,7 @@ theme_override_font_sizes/font_size = 40
 theme_override_styles/hover = SubResource("StyleBoxFlat_a7qly")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_dt4ns")
 theme_override_styles/normal = SubResource("StyleBoxFlat_3ruer")
-text = "Exit"
+text = "Menu"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="exitbutton"]
 stream = ExtResource("3_bwlwc")
