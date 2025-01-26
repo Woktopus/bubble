@@ -12,9 +12,12 @@ var friction : float = BASE_ACCELERATION / BASE_SPEED
 var input : Vector2
 var boat_orientation : String
 
+var skinName : String = ""
+
 # player life management 
 var current_health : int
 var is_alive : bool
+
 
 # shoot management 
 @onready var fire_timer = $FireTimer
@@ -42,6 +45,7 @@ func _ready():
 	add_child(speed_boost_timer)
 	
 func init(lInputDevice, lPlayer, lAnimatedTexture: String):
+	skinName = lAnimatedTexture
 	var spriteframe = load(lAnimatedTexture)
 	inputDevice = DeviceInput.new(lInputDevice)
 	player = lPlayer
@@ -80,7 +84,12 @@ func _process(delta: float) -> void:
 		move_and_slide()
 		
 		if(inputDevice.is_action_just_pressed("kwak")):
-			$AudioStreamPlayer.play()
+			if skinName in ["res://assets/paperboat/sprite_frame_paperboat.tres", "res://assets/paperboat_red/sprite_frame_paperboat_red.tres"]:
+				$AudioStreamPlayerPaper.play() # paperboard
+			elif skinName in ["res://assets/drakkar/drakkar.tres", "res://assets/drakkar_swap_2/drakkar_swap_2.tres","res://assets/drakkar_swap_3/drakkar_swap_3.tres", "res://assets/drakkar_swap_1/drakkar_swap_1.tres"]:
+				$AudioStreamPlayerDrakar.play()
+			else :
+				$AudioStreamPlayer.play() #canard
 
 
 func apply_traction(delta: float)-> void:

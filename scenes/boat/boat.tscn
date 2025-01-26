@@ -1,9 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://cd4gfi7gil2ix"]
+[gd_scene load_steps=8 format=3 uid="uid://cd4gfi7gil2ix"]
 
 [ext_resource type="Script" path="res://scenes/boat/boat.gd" id="1_nwkhy"]
 [ext_resource type="SpriteFrames" uid="uid://cd7jff1ed1ski" path="res://assets/canard/sprite_frame_canard.tres" id="2_src47"]
 [ext_resource type="AudioStream" uid="uid://d5e6p7qs74jc" path="res://sounds/coin.wav" id="3_qaktl"]
-[ext_resource type="AudioStream" uid="uid://cocbikuoeeb23" path="res://sounds/tirs bulles 3.wav" id="4_a66cd"]
+[ext_resource type="AudioStream" uid="uid://60kwya4nbvpa" path="res://sounds/tirs bulles 4.wav" id="4_dmals"]
+[ext_resource type="AudioStream" uid="uid://bkgnnmv8fmu22" path="res://sounds/son bateau papier.wav" id="5_2hvgq"]
+[ext_resource type="AudioStream" uid="uid://m4ei4xcvs53j" path="res://sounds/son drakar.wav" id="6_h5evh"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_rd0qi"]
 radius = 20.2237
@@ -29,4 +31,10 @@ shape = SubResource("CircleShape2D_rd0qi")
 stream = ExtResource("3_qaktl")
 
 [node name="AudioStreamPlayerBubble" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("4_a66cd")
+stream = ExtResource("4_dmals")
+
+[node name="AudioStreamPlayerPaper" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_2hvgq")
+
+[node name="AudioStreamPlayerDrakar" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_h5evh")
