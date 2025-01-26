@@ -278,3 +278,31 @@ texture = ExtResource("9_kd33t")
 position = Vector2(799, 400)
 scale = Vector2(1.3, 1.3)
 texture = ExtResource("9_kd33t")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -97.0
+offset_top = -40.0
+offset_right = 97.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Label" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Press"
+
+[node name="Label2" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("6_al2lj")
+theme_override_font_sizes/font_size = 50
+text = "xbox_button_start_icon_outline"
+
+[node name="Label3" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "to start game"
