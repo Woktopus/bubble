@@ -1,4 +1,38 @@
-[gd_scene format=3 uid="uid://dp5p7de2erqjq"]
+[gd_scene load_steps=8 format=3 uid="uid://dp5p7de2erqjq"]
+
+[ext_resource type="Texture2D" uid="uid://cne12hdd0by76" path="res://scenes/credit musics/creditbayou-SheetV2.png" id="1_by6nh"]
+[ext_resource type="FontFile" uid="uid://b3dxlv5lkpm1s" path="res://Fonts/Hardpixel.OTF" id="1_uj6i1"]
+[ext_resource type="AudioStream" uid="uid://d5e6p7qs74jc" path="res://sounds/coin.wav" id="2_0a3ma"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_23j37"]
+texture = ExtResource("1_by6nh")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dbxal"]
+bg_color = Color(0.450648, 0.450648, 0.450648, 0.721569)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1mpi4"]
+bg_color = Color(0.2484, 0.2484, 0.2484, 0.721569)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e2qhe"]
+bg_color = Color(0.6, 0.6, 0.6, 0.721569)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+expand_margin_top = 2.0
+expand_margin_bottom = 2.0
 
 [node name="CreditMusics" type="Control"]
 layout_mode = 3
@@ -7,3 +41,81 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_23j37")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+offset_left = 839.0
+offset_top = 543.0
+offset_right = 1145.0
+offset_bottom = 637.0
+theme_override_constants/separation = 25
+alignment = 1
+
+[node name="exitbutton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0.295867, 0.295866, 0.295866, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("1_uj6i1")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/hover = SubResource("StyleBoxFlat_dbxal")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_1mpi4")
+theme_override_styles/normal = SubResource("StyleBoxFlat_e2qhe")
+text = "Return"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="VBoxContainer/exitbutton"]
+stream = ExtResource("2_0a3ma")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = 192.0
+offset_top = 176.0
+offset_right = 1030.0
+offset_bottom = 538.0
+theme_override_fonts/normal_font = ExtResource("1_uj6i1")
+theme_override_font_sizes/bold_italics_font_size = 7
+theme_override_font_sizes/italics_font_size = 7
+theme_override_font_sizes/mono_font_size = 7
+theme_override_font_sizes/normal_font_size = 25
+text = "Musiques :
+Level VII by moodmode (lobby)
+Vitamin F by AudioCoffee
+ 
+
+Sons :
+Relaxing, Mountains, Rivers, Streams, Running Water by INNORECORDS (Freesound)
+Vintage Camera Flash Powder and Shutter by Werra (Freesound)
+Bubbling Loop 1 by floraphonic
+Boom 2b (cinematic) by ardiawan1989"
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 312.0
+offset_top = 72.0
+offset_right = 857.0
+offset_bottom = 121.0
+theme_override_fonts/font = ExtResource("1_uj6i1")
+theme_override_font_sizes/font_size = 36
+text = "Crédits Musiques/Sons/Polices"
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="."]
+offset_left = 680.0
+offset_top = 176.0
+offset_right = 1016.0
+offset_bottom = 538.0
+theme_override_fonts/normal_font = ExtResource("1_uj6i1")
+theme_override_font_sizes/bold_italics_font_size = 7
+theme_override_font_sizes/italics_font_size = 7
+theme_override_font_sizes/mono_font_size = 7
+theme_override_font_sizes/normal_font_size = 25
+text = "Polices :
+Huggy Bear by Pixel Sagas - Neale Davidson
+Hardpixel by Jovanny Lemonad"
