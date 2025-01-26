@@ -43,7 +43,7 @@ func _on_body_entered(body: Node2D) -> void:
 		if body.get_play_id() != player_owner:
 			queue_free()
 			body.manage_bubble_hit()
-	if "soap" in body.get_groups():
+	elif "soap" in body.get_groups():
 		queue_free()
 	else:
 		print("untracked collision bubble")

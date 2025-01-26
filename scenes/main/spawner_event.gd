@@ -74,11 +74,11 @@ func get_random_eventMarker()->Marker2D:
 		return $"../EventsMarker/MarkEvent9"
 
 func get_nb_evet_to_spawn(current_value: int)-> int:
-	if current_value >= 0 and current_value <= 2 :
+	if current_value >= 0 and current_value <= 1 :
 		return 1
-	elif current_value > 2 and current_value <= 8 :
+	elif current_value > 1 and current_value <= 3 :
 		return 3
-	elif current_value > 8 and current_value <= 10 : 
+	elif current_value > 3 and current_value <= 5 : 
 		return 4
 	else :
 		return 5
