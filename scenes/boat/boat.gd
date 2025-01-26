@@ -271,29 +271,12 @@ func _on_invu_timer_timeout():
 	is_invu = false
 
 func get_power_up(type):    
-	if(type == GameData.PowerType.BUBBLE):
-		bubble_powerup()
-	elif(type == GameData.PowerType.BOAT):
-		boat_powerup()
+	if(type == GameData.PowerType.SPEED):
+		apply_speed_boost()
+	elif(type == GameData.PowerType.HEALTH):
+		apply_heal_powerup()
 	else:
 		print("Invalid power up type")
-
-func bubble_powerup():
-	pass
-
-func boat_powerup():
-	var power_ups = ["speed_boost", "heal"]
-	var random_index = randi() % power_ups.size()
-	var selected_power_up = power_ups[random_index]
-
-	match selected_power_up:
-		"speed_boost":
-			apply_speed_boost()
-		"heal":
-				apply_heal_powerup()
-		"default":
-			print("Invalid power up")
-
 
 func apply_speed_boost():
 	print("Speed boost applied")
