@@ -78,6 +78,9 @@ func _process(delta: float) -> void:
 		set_direction_animation()
 		manage_shooting_bubble()
 		move_and_slide()
+		
+		if(inputDevice.is_action_just_pressed("kwak")):
+			$AudioStreamPlayer.play()
 
 
 func apply_traction(delta: float)-> void:
