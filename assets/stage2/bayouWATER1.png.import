@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://calhs8fotg7w6"
-path="res://.godot/imported/bayou-SheetV2.png-ebeac726344958d9b250172bdaca76cb.ctex"
+uid="uid://cs5t6fow78urc"
+path="res://.godot/imported/bayouWATER1.png-7bd29bc13416f8ab172c268afef36efe.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/bayou-SheetV2.png"
-dest_files=["res://.godot/imported/bayou-SheetV2.png-ebeac726344958d9b250172bdaca76cb.ctex"]
+source_file="res://assets/stage2/bayouWATER1.png"
+dest_files=["res://.godot/imported/bayouWATER1.png-7bd29bc13416f8ab172c268afef36efe.ctex"]
 
 [params]
 
