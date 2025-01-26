@@ -224,3 +224,12 @@ position = Vector2(550, 320)
 
 [node name="MarkEvent6" type="Marker2D" parent="EventsMarker"]
 position = Vector2(950, 130)
+
+[node name="MarkEvent7" type="Marker2D" parent="EventsMarker"]
+position = Vector2(950, 550)
+
+[node name="MarkEvent8" type="Marker2D" parent="EventsMarker"]
+position = Vector2(200, 100)
+
+[node name="MarkEvent9" type="Marker2D" parent="EventsMarker"]
+position = Vector2(200, 550)
