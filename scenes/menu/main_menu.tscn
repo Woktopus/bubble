@@ -111,6 +111,10 @@ alignment = 1
 [node name="startButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
+focus_neighbor_left = NodePath("../exitbutton")
+focus_neighbor_top = NodePath("../exitbutton")
+focus_neighbor_right = NodePath("../creditButton")
+focus_neighbor_bottom = NodePath("../creditButton")
 theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
 theme_override_colors/font_pressed_color = Color(0.295867, 0.295866, 0.295866, 1)
 theme_override_colors/font_color = Color(1, 1, 1, 1)
@@ -125,6 +129,10 @@ text = "Start"
 [node name="creditButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
+focus_neighbor_left = NodePath("../startButton")
+focus_neighbor_top = NodePath("../startButton")
+focus_neighbor_right = NodePath("../exitbutton")
+focus_neighbor_bottom = NodePath("../exitbutton")
 theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
 theme_override_colors/font_pressed_color = Color(0.295867, 0.295866, 0.295866, 1)
 theme_override_colors/font_color = Color(1, 1, 1, 1)
@@ -139,6 +147,10 @@ text = "Crédits"
 [node name="exitbutton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
+focus_neighbor_left = NodePath("../creditButton")
+focus_neighbor_top = NodePath("../creditButton")
+focus_neighbor_right = NodePath("../startButton")
+focus_neighbor_bottom = NodePath("../startButton")
 theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
 theme_override_colors/font_pressed_color = Color(0.295867, 0.295866, 0.295866, 1)
 theme_override_colors/font_color = Color(1, 1, 1, 1)
