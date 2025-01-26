@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://5s5wfeejfdyq" path="res://assets/stage1/decors2-Sheet.png" id="5_wlp47"]
 [ext_resource type="Texture2D" uid="uid://ohy2bby3mhsx" path="res://assets/stage1/plongeoir.png" id="7_oft4c"]
 [ext_resource type="Script" path="res://scenes/main/powerupspawner.gd" id="8_cve56"]
-[ext_resource type="PackedScene" path="res://scenes/interfaces/player_HUD.tscn" id="8_mfo83"]
+[ext_resource type="PackedScene" uid="uid://dkqeml1ukrwrk" path="res://scenes/interfaces/player_HUD.tscn" id="8_mfo83"]
 [ext_resource type="Shader" path="res://scenes/main/raylight.gdshader" id="9_ci8hw"]
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_drb20"]
@@ -200,3 +200,9 @@ offset_left = 943.0
 offset_top = 577.0
 offset_right = 943.0
 offset_bottom = 577.0
+
+[node name="MarkEvent1" type="Marker2D" parent="."]
+position = Vector2(550, 100)
+
+[node name="MarkEvent2" type="Marker2D" parent="."]
+position = Vector2(550, 550)
