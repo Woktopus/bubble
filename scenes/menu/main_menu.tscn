@@ -144,6 +144,9 @@ text = "Exit"
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="VBoxContainer/exitbutton"]
 stream = ExtResource("5_78gsu")
 
+[connection signal="mouse_entered" from="VBoxContainer/startButton" to="." method="_on_start_button_mouse_entered"]
 [connection signal="pressed" from="VBoxContainer/startButton" to="." method="_on_start_button_pressed"]
+[connection signal="mouse_entered" from="VBoxContainer/creditButton" to="." method="_on_credit_button_mouse_entered"]
 [connection signal="pressed" from="VBoxContainer/creditButton" to="." method="_on_credit_button_pressed"]
+[connection signal="mouse_entered" from="VBoxContainer/exitbutton" to="." method="_on_exitbutton_mouse_entered"]
 [connection signal="pressed" from="VBoxContainer/exitbutton" to="." method="_on_exitbutton_pressed"]
