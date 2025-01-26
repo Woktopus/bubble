@@ -266,13 +266,15 @@ func bubble_powerup():
 	pass
 
 func boat_powerup():
-	var power_ups = ["speed_boost"]
+	var power_ups = ["speed_boost", "heal"]
 	var random_index = randi() % power_ups.size()
 	var selected_power_up = power_ups[random_index]
 
 	match selected_power_up:
 		"speed_boost":
 			apply_speed_boost()
+		"heal":
+				apply_heal_powerup()
 		"default":
 			print("Invalid power up")
 
@@ -281,6 +283,14 @@ func apply_speed_boost():
 	print("Speed boost applied")
 	set_speed(5000)
 	speed_boost_timer.start(5.0)
+
+func apply_heal_powerup():
+	print("player heal")
+	if current_health <= 3 :
+		current_health += 1 
+		print("player heal")
+	else :
+		print("can't heal, already 4 hp")	
 
 func _on_speed_boost_timer_timeout():
 	print("Speed boost expired")
