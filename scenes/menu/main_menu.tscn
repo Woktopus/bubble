@@ -1,8 +1,10 @@
-[gd_scene load_steps=10 format=3 uid="uid://cp3t3h0ya1176"]
+[gd_scene load_steps=12 format=3 uid="uid://cp3t3h0ya1176"]
 
 [ext_resource type="Texture2D" uid="uid://crwh12bube88y" path="res://assets/Menu-export.png" id="1_213kh"]
+[ext_resource type="Script" path="res://scenes/menu/main_menu.gd" id="1_ad7ml"]
 [ext_resource type="FontFile" uid="uid://df1diabc4vw8m" path="res://Fonts/Huggy Bear.otf" id="2_64rkm"]
 [ext_resource type="FontFile" uid="uid://cya2gqvjhuwh4" path="res://Fonts/Huggy Bear Italic.otf" id="3_7ep3a"]
+[ext_resource type="AudioStream" uid="uid://d5e6p7qs74jc" path="res://sounds/coin.wav" id="5_78gsu"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_m8rcv"]
 texture = ExtResource("1_213kh")
@@ -52,6 +54,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_ad7ml")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1
@@ -137,3 +140,10 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_5bedc")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_cpb44")
 theme_override_styles/normal = SubResource("StyleBoxFlat_ikom8")
 text = "Exit"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="VBoxContainer/exitbutton"]
+stream = ExtResource("5_78gsu")
+
+[connection signal="pressed" from="VBoxContainer/startButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/creditButton" to="." method="_on_credit_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/exitbutton" to="." method="_on_exitbutton_pressed"]
