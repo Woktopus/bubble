@@ -208,6 +208,7 @@ position = Vector2(200, 100)
 position = Vector2(200, 550)
 
 [node name="WinnerPanel" parent="." instance=ExtResource("12_kkvxs")]
+visible = false
 offset_left = 543.0
 offset_top = 287.0
 offset_right = 543.0
