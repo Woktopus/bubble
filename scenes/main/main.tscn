@@ -129,15 +129,19 @@ shape = SubResource("RectangleShape2D_twcly")
 position = Vector2(766, 248)
 
 [node name="markerp1" type="Marker2D" parent="."]
+visible = false
 position = Vector2(986, 172)
 
 [node name="markerp2" type="Marker2D" parent="."]
+visible = false
 position = Vector2(960, 499)
 
 [node name="markerp3" type="Marker2D" parent="."]
+visible = false
 position = Vector2(168, 481)
 
 [node name="markerp4" type="Marker2D" parent="."]
+visible = false
 position = Vector2(159, 153)
 
 [node name="Plongeoir" type="Sprite2D" parent="."]
@@ -201,8 +205,22 @@ offset_top = 577.0
 offset_right = 943.0
 offset_bottom = 577.0
 
-[node name="MarkEvent1" type="Marker2D" parent="."]
+[node name="EventsMarker" type="Node2D" parent="."]
+
+[node name="MarkEvent1" type="Marker2D" parent="EventsMarker"]
 position = Vector2(550, 100)
 
-[node name="MarkEvent2" type="Marker2D" parent="."]
+[node name="MarkEvent2" type="Marker2D" parent="EventsMarker"]
 position = Vector2(550, 550)
+
+[node name="MarkEvent3" type="Marker2D" parent="EventsMarker"]
+position = Vector2(200, 320)
+
+[node name="MarkEvent4" type="Marker2D" parent="EventsMarker"]
+position = Vector2(950, 320)
+
+[node name="MarkEvent5" type="Marker2D" parent="EventsMarker"]
+position = Vector2(550, 320)
+
+[node name="MarkEvent6" type="Marker2D" parent="EventsMarker"]
+position = Vector2(950, 130)
