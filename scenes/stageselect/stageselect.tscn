@@ -1,0 +1,122 @@
+[gd_scene load_steps=11 format=3 uid="uid://c1lgxq0fphr0t"]
+
+[ext_resource type="Script" path="res://scenes/stageselect/stageselect.gd" id="1_3j2fy"]
+[ext_resource type="Texture2D" uid="uid://c6kqboj4yhlom" path="res://scenes/main/Screenshot-2021-12-28-122056.png" id="1_8f1nc"]
+[ext_resource type="Shader" path="res://water.gdshader" id="2_y7ht0"]
+[ext_resource type="Texture2D" uid="uid://o2miwtcnlxxr" path="res://assets/2d_lights_and_shadows_neutral_point_light.webp" id="3_e125r"]
+[ext_resource type="FontFile" uid="uid://qalmecrbkxyp" path="res://addons/input_prompt_icon_font/icon.ttf" id="4_eudg5"]
+[ext_resource type="Texture2D" uid="uid://fqs87iwp411h" path="res://assets/plageMINIATURE.png" id="6_bv42k"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_jqkhr"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_fj8wq"]
+noise_type = 0
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_gbkvo"]
+seamless = true
+noise = SubResource("FastNoiseLite_fj8wq")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_s74x5"]
+shader = ExtResource("2_y7ht0")
+shader_parameter/refraction_stretch = Vector2(1, 1)
+shader_parameter/refraction_strength = 0.02
+shader_parameter/water_tint = Color(0.2, 0.6, 1, 0.1)
+shader_parameter/speed = 0.1
+shader_parameter/refraction_map = SubResource("NoiseTexture2D_gbkvo")
+
+[node name="Stageselect" type="Node"]
+script = ExtResource("1_3j2fy")
+
+[node name="Screenshot-2021-12-28-122056" type="Sprite2D" parent="."]
+modulate = Color(0.344076, 0.344076, 0.344076, 1)
+material = SubResource("ShaderMaterial_jqkhr")
+position = Vector2(601, 323)
+scale = Vector2(1.28679, 0.91623)
+texture = ExtResource("1_8f1nc")
+metadata/_edit_lock_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_s74x5")
+position = Vector2(608, 322)
+scale = Vector2(1.26101, 1.05497)
+texture = ExtResource("1_8f1nc")
+metadata/_edit_lock_ = true
+
+[node name="PointLightp1" type="PointLight2D" parent="."]
+visible = false
+position = Vector2(615, 387)
+scale = Vector2(4.00547, 4.00547)
+texture = ExtResource("3_e125r")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/MarginContainer"]
+layout_mode = 2
+
+[node name="LabelLeftArrow" type="Label" parent="Control/MarginContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_eudg5")
+theme_override_font_sizes/font_size = 80
+text = "xbox_dpad_left_outline"
+
+[node name="MarginContainer" type="MarginContainer" parent="Control/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_right = 20
+
+[node name="TextureRect" type="TextureRect" parent="Control/MarginContainer/HBoxContainer/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("6_bv42k")
+stretch_mode = 5
+
+[node name="LabelRightArrow" type="Label" parent="Control/MarginContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_eudg5")
+theme_override_font_sizes/font_size = 80
+text = "xbox_dpad_right_outline"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -97.0
+offset_top = -40.0
+offset_right = 97.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Label" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Press"
+
+[node name="Label2" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_eudg5")
+theme_override_font_sizes/font_size = 50
+text = "xbox_button_start_icon_outline"
+
+[node name="Label3" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "to start game"
