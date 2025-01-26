@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://tc0osxx8le72"
-path="res://.godot/imported/crocodile.png-81ae20be0787d9b6ea4c737d8ebd06b1.ctex"
+uid="uid://cne12hdd0by76"
+path="res://.godot/imported/creditbayou-SheetV2.png-257edc3e2d400fd150e831ffd0dcbc26.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/crocodile.png"
-dest_files=["res://.godot/imported/crocodile.png-81ae20be0787d9b6ea4c737d8ebd06b1.ctex"]
+source_file="res://scenes/credit musics/creditbayou-SheetV2.png"
+dest_files=["res://.godot/imported/creditbayou-SheetV2.png-257edc3e2d400fd150e831ffd0dcbc26.ctex"]
 
 [params]
 

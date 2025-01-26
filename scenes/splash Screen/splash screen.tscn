@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://dbmt6b80tv24r"]
+[gd_scene load_steps=5 format=3 uid="uid://dbmt6b80tv24r"]
 
 [ext_resource type="Script" path="res://scenes/splash Screen/splash_screen.gd" id="1_ypnnq"]
 [ext_resource type="PackedScene" uid="uid://cp3t3h0ya1176" path="res://scenes/menu/main_menu.tscn" id="2_jd5ti"]
 [ext_resource type="Texture2D" uid="uid://bhsg8cfo30r5v" path="res://assets/splash/woktopus-removebg.png" id="2_l7wwb"]
+[ext_resource type="AudioStream" uid="uid://booajqdym1dpw" path="res://sounds/son bulles splash screen.wav" id="4_qe34f"]
 
 [node name="SplashScreen" type="Control" node_paths=PackedStringArray("splash_screen")]
 layout_mode = 3
@@ -36,3 +37,8 @@ grow_vertical = 2
 texture = ExtResource("2_l7wwb")
 expand_mode = 3
 stretch_mode = 5
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_qe34f")
+
+[connection signal="focus_entered" from="TextureRect" to="." method="_on_texture_rect_focus_entered"]

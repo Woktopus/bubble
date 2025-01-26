@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://tc0osxx8le72"
-path="res://.godot/imported/crocodile.png-81ae20be0787d9b6ea4c737d8ebd06b1.ctex"
+uid="uid://dim4v5smb7etd"
+path="res://.godot/imported/crocodile.png-22c55b667945eee46bd63bfbe3f26299.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/crocodile.png"
-dest_files=["res://.godot/imported/crocodile.png-81ae20be0787d9b6ea4c737d8ebd06b1.ctex"]
+source_file="res://scenes/credit musics/crocodile.png"
+dest_files=["res://.godot/imported/crocodile.png-22c55b667945eee46bd63bfbe3f26299.ctex"]
 
 [params]
 
