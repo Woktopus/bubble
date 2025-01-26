@@ -183,42 +183,58 @@ func get_angle_fire_bullet_left()->float:
 	
 	var shoot_radius : float = 0.0
 	if boat_orientation == "up":
-		shoot_radius = 180.0
-	elif boat_orientation == "right_up" :
-		shoot_radius = -135.0
-	elif boat_orientation == "right" :
+		#shoot_radius = 180.0
 		shoot_radius = -90.0
-	elif boat_orientation == "right_down" :
+	elif boat_orientation == "right_up" :
+		#shoot_radius = -135.0
 		shoot_radius = -45.0
-	elif boat_orientation == "down" :
+	elif boat_orientation == "right" :
 		shoot_radius = 0.0
-	elif boat_orientation == "left_down" :
+		#shoot_radius = -90.0
+	elif boat_orientation == "right_down" :
+		#shoot_radius = -45.0
 		shoot_radius = 45.0
-	elif boat_orientation == "left" :
+	elif boat_orientation == "down" :
+		#shoot_radius = 0.0
 		shoot_radius = 90.0
-	elif boat_orientation == "left_up" :
+	elif boat_orientation == "left_down" :
+		#shoot_radius = 45.0
 		shoot_radius = 135.0
+	elif boat_orientation == "left" :
+		#shoot_radius = 90.0
+		shoot_radius = 180.0
+	elif boat_orientation == "left_up" :
+		#shoot_radius = 135.0
+		shoot_radius = -135.0
 	return shoot_radius
 	
 func get_angle_fire_bullet_right()->float:
 	var shoot_radius : float = 0.0
 	
 	if boat_orientation == "up":
-		shoot_radius = 0.0
-	elif boat_orientation == "right_up" :
-		shoot_radius = 45.0
-	elif boat_orientation == "right" :
-		shoot_radius = 90.0
-	elif boat_orientation == "right_down" :
-		shoot_radius = 135.0
-	elif boat_orientation == "down" :
-		shoot_radius = 180.0
-	elif boat_orientation == "left_down" :
-		shoot_radius = -135.0
-	elif boat_orientation == "left" :
+		#shoot_radius = 0.0
 		shoot_radius = -90.0
-	elif boat_orientation == "left_up" :
+	elif boat_orientation == "right_up" :
+		#shoot_radius = 45.0
 		shoot_radius = -45.0
+	elif boat_orientation == "right" :
+		#shoot_radius = 90.0
+		shoot_radius = 0.0
+	elif boat_orientation == "right_down" :
+		#shoot_radius = 135.0
+		shoot_radius = 45.0
+	elif boat_orientation == "down" :
+		#shoot_radius = 180.0
+		shoot_radius = 90.0
+	elif boat_orientation == "left_down" :
+		# shoot_radius = -135.0
+		shoot_radius = 135.0
+	elif boat_orientation == "left" :
+		#shoot_radius = -90.0
+		shoot_radius = 180.0
+	elif boat_orientation == "left_up" :
+		#shoot_radius = -45.0
+		shoot_radius = -135.0
 	return shoot_radius
 
 func set_can_fire() -> void:
