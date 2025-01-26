@@ -9,7 +9,9 @@ var player_nodes = {}
 
 var label_icons = {}
 var secondary_label_icons = {}
-
+var label_left_arrows = {}
+var label_right_arrows = {}
+var light = {}
 func _ready():
 	GameData.reset_all()
 	loby_manager.player_joined.connect(spawn_player)
@@ -26,6 +28,30 @@ func _ready():
 		2: $Control/MarginContainer/GridContainer/VBoxP3/hboxp3pressA/Label3,
 		3: $Control/MarginContainer/GridContainer/VBoxP4/hboxp4pressA/Label3
 	}
+	label_left_arrows = {
+		0: $Control/MarginContainer/GridContainer/VBoxP1/HBoxContainer/LabelLeftArrow,
+		1: $Control/MarginContainer/GridContainer/VBoxP2/HBoxContainer/LabelLeftArrow,
+		2: $Control/MarginContainer/GridContainer/VBoxP3/HBoxContainer/LabelLeftArrow,
+		3: $Control/MarginContainer/GridContainer/VBoxP4/HBoxContainer/LabelLeftArrow
+	}
+	label_right_arrows = {
+		0: $Control/MarginContainer/GridContainer/VBoxP1/HBoxContainer/LabelRightArrow,
+		1: $Control/MarginContainer/GridContainer/VBoxP2/HBoxContainer/LabelRightArrow,
+		2: $Control/MarginContainer/GridContainer/VBoxP3/HBoxContainer/LabelRightArrow,
+		3: $Control/MarginContainer/GridContainer/VBoxP4/HBoxContainer/LabelRightArrow
+	}
+	light = {
+		0: $PointLightp1,
+		1: $PointLightp2,
+		2: $PointLightp3,
+		3: $PointLightp4
+	}
+
+	#set visibility of right and left arrows to false
+	for i in range(4):
+		label_left_arrows[i].visible = false
+		label_right_arrows[i].visible = false
+		light[i].visible = false
 
 func _process(_delta):
 	loby_manager.handle_join_input()
@@ -39,7 +65,7 @@ func spawn_player(player: int):
 	# Find the next available LobbyPlayer node
 	var player_node = null
 	for i in range(4):
-		var node = $Control/MarginContainer/GridContainer.get_child(i).get_child(0)
+		var node = $Control/MarginContainer/GridContainer.get_child(i).get_child(0).get_child(1)
 		if not node in player_nodes.values():
 			player_node = node
 			break
@@ -58,7 +84,9 @@ func spawn_player(player: int):
 	player_node.leave.connect(on_player_leave)
 
 	update_label_icon(player, "xbox_button_b_outline", Color.RED, "to leave")
-
+	label_left_arrows[player].visible = true
+	label_right_arrows[player].visible = true
+	light[player].visible = true
 
 func update_label_icon(player: int, action: String, color: Color, secondary_action: String):
 	if player in label_icons:
@@ -75,7 +103,9 @@ func delete_player(player: int):
 		player_node.reset()  # Assuming you have a reset method to clear the player state
 		player_nodes.erase(player)
 		update_label_icon(player, "xbox_button_a_outline", Color.GREEN, "to join")
-
+		label_left_arrows[player].visible = false
+		label_right_arrows[player].visible = false
+		light[player].visible = false
 
 func on_player_leave(player: int):
 	# just let the player manager know this player is leaving

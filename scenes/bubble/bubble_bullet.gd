@@ -4,7 +4,7 @@ class_name BubbleBulet
 
 var direcion : Vector2
 
-@export var bullet_speed : float = 250.0
+@export var bullet_speed : float = 300.0
 @onready var visible_notifier = $VisibleNotifier as VisibleOnScreenNotifier2D
 
 var direction = Vector2.RIGHT
@@ -36,10 +36,10 @@ func bubble_explode() -> void:
 func _on_body_entered(body: Node2D) -> void:
 	if "boat" in body.get_groups():
 		
-		print("========================")
-		prints("owner id %s ", player_owner)
-		prints("target id target %s", body.get_play_id())
-		print("========================")
+		#print("========================")
+		#prints("owner id %s ", player_owner)
+		#prints("target id target %s", body.get_play_id())
+		#print("========================")
 		if body.get_play_id() != player_owner:
 			queue_free()
 			body.manage_bubble_hit()

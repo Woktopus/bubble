@@ -1,14 +1,49 @@
-[gd_scene load_steps=7 format=3 uid="uid://diaen2m1et70t"]
+[gd_scene load_steps=14 format=3 uid="uid://diaen2m1et70t"]
 
 [ext_resource type="Script" path="res://scenes/lobby/lobby.gd" id="1_lrhhc"]
 [ext_resource type="PackedScene" uid="uid://doka6pvyae620" path="res://scenes/lobby/lobby_player.tscn" id="2_peqk2"]
 [ext_resource type="Script" path="res://scenes/lobby/loby_manager.gd" id="2_tc88q"]
+[ext_resource type="Shader" path="res://water.gdshader" id="3_dhl5a"]
 [ext_resource type="AudioStream" uid="uid://c2b7koki55sn8" path="res://music/music lobby.mp3" id="4_kl2m6"]
 [ext_resource type="AudioStream" uid="uid://deh1w118xqad6" path="res://sounds/075176_duck-quack-40345.mp3" id="5_fip16"]
 [ext_resource type="FontFile" uid="uid://qalmecrbkxyp" path="res://addons/input_prompt_icon_font/icon.ttf" id="6_al2lj"]
+[ext_resource type="Texture2D" uid="uid://c6kqboj4yhlom" path="res://scenes/main/Screenshot-2021-12-28-122056.png" id="7_tppdn"]
+[ext_resource type="Texture2D" uid="uid://o2miwtcnlxxr" path="res://assets/2d_lights_and_shadows_neutral_point_light.webp" id="9_kd33t"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ubso5"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_mxupo"]
+noise_type = 0
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_gbkvo"]
+seamless = true
+noise = SubResource("FastNoiseLite_mxupo")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_wc4eg"]
+shader = ExtResource("3_dhl5a")
+shader_parameter/refraction_stretch = Vector2(1, 1)
+shader_parameter/refraction_strength = 0.02
+shader_parameter/water_tint = Color(0.2, 0.6, 1, 0.1)
+shader_parameter/speed = 0.1
+shader_parameter/refraction_map = SubResource("NoiseTexture2D_gbkvo")
 
 [node name="Lobby" type="Node"]
 script = ExtResource("1_lrhhc")
+
+[node name="Screenshot-2021-12-28-122056" type="Sprite2D" parent="."]
+modulate = Color(0.344076, 0.344076, 0.344076, 1)
+material = SubResource("ShaderMaterial_ubso5")
+position = Vector2(601, 323)
+scale = Vector2(1.28679, 0.91623)
+texture = ExtResource("7_tppdn")
+metadata/_edit_lock_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_wc4eg")
+position = Vector2(608, 322)
+scale = Vector2(1.26101, 1.05497)
+texture = ExtResource("7_tppdn")
+metadata/_edit_lock_ = true
 
 [node name="LobyManager" type="Node" parent="."]
 script = ExtResource("2_tc88q")
@@ -50,8 +85,24 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="LobbyPlayer" parent="Control/MarginContainer/GridContainer/VBoxP1" instance=ExtResource("2_peqk2")]
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/MarginContainer/GridContainer/VBoxP1"]
 layout_mode = 2
+size_flags_vertical = 3
+
+[node name="LabelLeftArrow" type="Label" parent="Control/MarginContainer/GridContainer/VBoxP1/HBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("6_al2lj")
+theme_override_font_sizes/font_size = 40
+text = "xbox_dpad_left_outline"
+
+[node name="LobbyPlayer" parent="Control/MarginContainer/GridContainer/VBoxP1/HBoxContainer" instance=ExtResource("2_peqk2")]
+layout_mode = 2
+
+[node name="LabelRightArrow" type="Label" parent="Control/MarginContainer/GridContainer/VBoxP1/HBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("6_al2lj")
+theme_override_font_sizes/font_size = 40
+text = "xbox_dpad_right_outline"
 
 [node name="hboxp1pressA" type="HBoxContainer" parent="Control/MarginContainer/GridContainer/VBoxP1"]
 layout_mode = 2
@@ -78,8 +129,24 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="LobbyPlayer" parent="Control/MarginContainer/GridContainer/VBoxP2" instance=ExtResource("2_peqk2")]
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/MarginContainer/GridContainer/VBoxP2"]
 layout_mode = 2
+size_flags_vertical = 3
+
+[node name="LabelLeftArrow" type="Label" parent="Control/MarginContainer/GridContainer/VBoxP2/HBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("6_al2lj")
+theme_override_font_sizes/font_size = 40
+text = "xbox_dpad_left_outline"
+
+[node name="LobbyPlayer" parent="Control/MarginContainer/GridContainer/VBoxP2/HBoxContainer" instance=ExtResource("2_peqk2")]
+layout_mode = 2
+
+[node name="LabelRightArrow" type="Label" parent="Control/MarginContainer/GridContainer/VBoxP2/HBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("6_al2lj")
+theme_override_font_sizes/font_size = 40
+text = "xbox_dpad_right_outline"
 
 [node name="hboxp2pressA" type="HBoxContainer" parent="Control/MarginContainer/GridContainer/VBoxP2"]
 layout_mode = 2
@@ -105,9 +172,26 @@ text = "to play"
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+metadata/_edit_lock_ = true
 
-[node name="LobbyPlayer" parent="Control/MarginContainer/GridContainer/VBoxP3" instance=ExtResource("2_peqk2")]
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/MarginContainer/GridContainer/VBoxP3"]
 layout_mode = 2
+size_flags_vertical = 3
+
+[node name="LabelLeftArrow" type="Label" parent="Control/MarginContainer/GridContainer/VBoxP3/HBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("6_al2lj")
+theme_override_font_sizes/font_size = 40
+text = "xbox_dpad_left_outline"
+
+[node name="LobbyPlayer" parent="Control/MarginContainer/GridContainer/VBoxP3/HBoxContainer" instance=ExtResource("2_peqk2")]
+layout_mode = 2
+
+[node name="LabelRightArrow" type="Label" parent="Control/MarginContainer/GridContainer/VBoxP3/HBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("6_al2lj")
+theme_override_font_sizes/font_size = 40
+text = "xbox_dpad_right_outline"
 
 [node name="hboxp3pressA" type="HBoxContainer" parent="Control/MarginContainer/GridContainer/VBoxP3"]
 layout_mode = 2
@@ -133,9 +217,27 @@ text = "to play"
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+metadata/_edit_lock_ = true
 
-[node name="LobbyPlayer" parent="Control/MarginContainer/GridContainer/VBoxP4" instance=ExtResource("2_peqk2")]
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/MarginContainer/GridContainer/VBoxP4"]
 layout_mode = 2
+size_flags_vertical = 3
+
+[node name="LabelLeftArrow" type="Label" parent="Control/MarginContainer/GridContainer/VBoxP4/HBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("6_al2lj")
+theme_override_font_sizes/font_size = 40
+text = "xbox_dpad_left_outline"
+
+[node name="LobbyPlayer" parent="Control/MarginContainer/GridContainer/VBoxP4/HBoxContainer" instance=ExtResource("2_peqk2")]
+layout_mode = 2
+metadata/_edit_lock_ = true
+
+[node name="LabelRightArrow" type="Label" parent="Control/MarginContainer/GridContainer/VBoxP4/HBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("6_al2lj")
+theme_override_font_sizes/font_size = 40
+text = "xbox_dpad_right_outline"
 
 [node name="hboxp4pressA" type="HBoxContainer" parent="Control/MarginContainer/GridContainer/VBoxP4"]
 layout_mode = 2
@@ -156,3 +258,23 @@ horizontal_alignment = 1
 [node name="Label3" type="Label" parent="Control/MarginContainer/GridContainer/VBoxP4/hboxp4pressA"]
 layout_mode = 2
 text = "to play"
+
+[node name="PointLightp1" type="PointLight2D" parent="."]
+position = Vector2(337, 157)
+scale = Vector2(1.3, 1.3)
+texture = ExtResource("9_kd33t")
+
+[node name="PointLightp2" type="PointLight2D" parent="."]
+position = Vector2(813, 157)
+scale = Vector2(1.3, 1.3)
+texture = ExtResource("9_kd33t")
+
+[node name="PointLightp3" type="PointLight2D" parent="."]
+position = Vector2(333, 404)
+scale = Vector2(1.3, 1.3)
+texture = ExtResource("9_kd33t")
+
+[node name="PointLightp4" type="PointLight2D" parent="."]
+position = Vector2(799, 400)
+scale = Vector2(1.3, 1.3)
+texture = ExtResource("9_kd33t")

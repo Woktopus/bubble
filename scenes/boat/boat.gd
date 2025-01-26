@@ -170,6 +170,7 @@ func manage_shooting_bubble()-> void:
 			bubble_bullet.position = global_position
 			bubble_bullet.direction = Vector2.RIGHT.rotated(deg_to_rad(get_angle_fire_bullet_left()))
 			get_parent().add_child(bubble_bullet)
+			$AudioStreamPlayerBubble.play()
 		else :
 			
 			# calcule du vecteur de la bullet
