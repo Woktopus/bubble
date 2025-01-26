@@ -1,7 +1,7 @@
 extends Area2D
 class_name Soap
 
-var soap_speed : float = 500.0
+var soap_speed : float = 200.0
 var acceleration_speed : float
 var marker_source : Marker2D
 var marker_destination : Marker2D
@@ -15,6 +15,7 @@ func init_soap(source : Marker2D, destination : Marker2D, acceleration: float) -
 	marker_source = source
 	marker_destination = destination
 	acceleration_speed = acceleration
+	prints("soap setup de  "+str(source.global_position)+" vers "+str(destination.global_position)+"")
 	
 func start_soap():
 	position = marker_source.global_position
@@ -28,17 +29,19 @@ func _ready() -> void:
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(delta: float) -> void:	
 	go_there(delta)
 
 
 func go_there(delta:float)-> void:
 	if is_moving :
 		position = position.move_toward(destination_position, delta * soap_speed)
+		
 	if position == destination_position : 
 		is_moving = false
 		queue_free()
 
 func _on_body_entered(body: Node2D) -> void:
 	if "boat" in body.get_groups():
+		print("boat hit soap")
 		body.manage_bubble_hit()
