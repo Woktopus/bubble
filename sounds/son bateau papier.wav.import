@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bkgnnmv8fmu22"
+path="res://.godot/imported/son bateau papier.wav-4908f9e056ca7725032c57a9b48fa1e9.sample"
+
+[deps]
+
+source_file="res://sounds/son bateau papier.wav"
+dest_files=["res://.godot/imported/son bateau papier.wav-4908f9e056ca7725032c57a9b48fa1e9.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
