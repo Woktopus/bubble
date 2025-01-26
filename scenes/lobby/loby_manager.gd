@@ -107,7 +107,7 @@ func get_unjoined_devices():
 	return devices.filter(func(device): return !is_device_joined(device))
 
 func start_game():
-	if get_player_count() >= MIN_PLAYERS:
+	if get_player_count() >= MIN_PLAYERS || Input.is_action_just_pressed("bypass1player"):
 		print("start game")
 		GameData.player_data = player_data
 

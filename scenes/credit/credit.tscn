@@ -74,7 +74,7 @@ theme_override_font_sizes/italics_font_size = 7
 theme_override_font_sizes/mono_font_size = 7
 theme_override_font_sizes/normal_font_size = 25
 text = "Devs :
-Enferium / Mathieu BRILLAND
+Enferium / Mathieu BRILAND
 MrGuguste / Auguste MEYER"
 
 [node name="RichTextLabel2" type="RichTextLabel" parent="."]
@@ -154,6 +154,7 @@ text = "Musics/Sounds"
 stream = ExtResource("3_bwlwc")
 
 [node name="exitbutton" type="Button" parent="."]
+layout_mode = 0
 offset_left = 832.0
 offset_top = 576.0
 offset_right = 1134.0

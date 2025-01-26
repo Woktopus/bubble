@@ -56,6 +56,8 @@ func _ready():
 func _process(_delta):
 	loby_manager.handle_join_input()
 	loby_manager.someone_wants_to_start()
+	if(Input.is_key_pressed(KEY_ESCAPE)):
+		get_tree().change_scene_to_file("res://scenes/menu/main_menu.tscn")
 
 func spawn_player(player: int):
 	# Check if the player already exists and find the next available slot
