@@ -87,7 +87,7 @@ func _process(delta: float) -> void:
 		$WinnerPanel.visible=true
 		reset_timer.start(4.0)
 		isResetNotTimerLaunched = false
-		
+	update_players_gui()
 		
 	#var boats = get_tree().get_nodes_in_group("boat")
 	pass
@@ -106,6 +106,20 @@ func check_players_state() -> int :
 	if more_than_one :
 		return_value = -1
 	return return_value
+	
+func update_players_gui():
+	var boats = get_tree().get_nodes_in_group("boat")
+	for boat : Player in boats :
+		if boat.player == 0 :
+			$GUI/Player1Hud.update_life_bar(boat.get_player_health())
+		if boat.player == 1 :
+			$GUI/Player2Hud.update_life_bar(boat.get_player_health())
+		if boat.player == 2 :
+			$GUI/Player3Hud.update_life_bar(boat.get_player_health())
+		if boat.player == 3 :
+			$GUI/Player4Hud.update_life_bar(boat.get_player_health())
+			
+	pass
 	
 func jpp():
 	print("end")

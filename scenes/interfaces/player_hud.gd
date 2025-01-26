@@ -17,3 +17,9 @@ func set_player_libelle(text_display : String)-> void :
 func set_player_icone(path_texture:String)->void:
 	var spriteframe = load(path_texture)
 	$MarginContainer/VBoxContainer/HBoxContainer/TextureRect.texture = spriteframe
+
+func update_life_bar(value:int)->void:
+	$MarginContainer/VBoxContainer/HBoxContainer2/LifeBar.update_progress_bar(value)
+	pass
+	#$MarginContainer/VBoxContainer/HBoxContainer2/LifeBar.
+	
