@@ -38,7 +38,9 @@ texture = ExtResource("2_l7wwb")
 expand_mode = 3
 stretch_mode = 5
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="son bulles splash" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_qe34f")
+volume_db = -3.525
 
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
 [connection signal="focus_entered" from="TextureRect" to="." method="_on_texture_rect_focus_entered"]

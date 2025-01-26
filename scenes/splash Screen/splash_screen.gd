@@ -8,6 +8,8 @@ extends Control
 @export var splash_screen: TextureRect
 @export var change_scene_to_packed : PackedScene
 
+
+
 func fade() -> void:
 	splash_screen.modulate.a = 0.0
 	var tween = create_tween()
@@ -28,6 +30,7 @@ func _process(delta: float) -> void:
 	pass
 
 
-func _on_texture_rect_focus_entered() -> void:
-	pass # Replace with function body.
-	$AudioStreamPlayer.play()
+
+
+func _on_mouse_entered() -> void:
+	$"son bulles splash".play()
