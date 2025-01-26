@@ -5,10 +5,10 @@
 [ext_resource type="Shader" path="res://water.gdshader" id="1_tfryt"]
 [ext_resource type="Texture2D" uid="uid://nug850bp4b7x" path="res://assets/stage1/waterstg1.png" id="2_uoinm"]
 [ext_resource type="PackedScene" uid="uid://mjb5wt0n5qkt" path="res://scenes/powerup/powerup.tscn" id="5_7clre"]
-[ext_resource type="Texture2D" uid="uid://5s5wfeejfdyq" path="res://assets/stage1/decors2-Sheet.png" id="5_wlp47"]
+[ext_resource type="Texture2D" uid="uid://dsw5h6cfl4blk" path="res://assets/stage1/decors2-Sheetv2.png" id="7_no7d4"]
 [ext_resource type="Texture2D" uid="uid://ohy2bby3mhsx" path="res://assets/stage1/plongeoir.png" id="7_oft4c"]
 [ext_resource type="Script" path="res://scenes/main/powerupspawner.gd" id="8_cve56"]
-[ext_resource type="PackedScene" path="res://scenes/interfaces/player_HUD.tscn" id="8_mfo83"]
+[ext_resource type="PackedScene" uid="uid://dkqeml1ukrwrk" path="res://scenes/interfaces/player_HUD.tscn" id="8_mfo83"]
 [ext_resource type="Shader" path="res://scenes/main/raylight.gdshader" id="9_ci8hw"]
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_drb20"]
@@ -27,22 +27,22 @@ shader_parameter/water_tint = Color(0.2, 0.6, 1, 0.1)
 shader_parameter/speed = 0.141
 shader_parameter/refraction_map = SubResource("NoiseTexture2D_pm2x6")
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_hqffp"]
-atlas = ExtResource("5_wlp47")
+[sub_resource type="AtlasTexture" id="AtlasTexture_g3s2w"]
+atlas = ExtResource("7_no7d4")
 region = Rect2(0, 0, 500, 281)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_4y8c7"]
-atlas = ExtResource("5_wlp47")
+[sub_resource type="AtlasTexture" id="AtlasTexture_i3nbc"]
+atlas = ExtResource("7_no7d4")
 region = Rect2(500, 0, 500, 281)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_fye1o"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_hqffp")
+"texture": SubResource("AtlasTexture_g3s2w")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_4y8c7")
+"texture": SubResource("AtlasTexture_i3nbc")
 }],
 "loop": true,
 "name": &"default",
@@ -68,7 +68,7 @@ shader_parameter/position = -0.2
 shader_parameter/spread = 0.5
 shader_parameter/cutoff = 0.1
 shader_parameter/falloff = 0.2
-shader_parameter/edge_fade = 0.15
+shader_parameter/edge_fade = 0.513
 shader_parameter/speed = 2.0
 shader_parameter/ray1_density = 8.0
 shader_parameter/ray2_density = 30.0
