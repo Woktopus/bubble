@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://dkqeml1ukrwrk"]
+[gd_scene load_steps=6 format=3 uid="uid://dkqeml1ukrwrk"]
 
 [ext_resource type="Script" path="res://scenes/interfaces/player_hud.gd" id="1_8xknj"]
 [ext_resource type="Texture2D" uid="uid://wvemjganfc64" path="res://assets/canard/Sprite-0002-Sheet.png" id="1_pqscc"]
 [ext_resource type="PackedScene" uid="uid://dfhd3248glqo5" path="res://scenes/interfaces/life_bar.tscn" id="2_40qwv"]
+[ext_resource type="Texture2D" uid="uid://bedylt4noy3dn" path="res://assets/powerup/jetonboat vierge.png" id="3_dtell"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_4v32p"]
 font_size = 19
@@ -31,7 +32,7 @@ layout_mode = 2
 [node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer"]
 layout_direction = 1
 layout_mode = 2
-size_flags_horizontal = 3
+size_flags_horizontal = 6
 texture = ExtResource("1_pqscc")
 expand_mode = 2
 
@@ -40,8 +41,25 @@ layout_mode = 2
 text = "PLAYER X"
 label_settings = SubResource("LabelSettings_4v32p")
 
+[node name="HBoxContainer3" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="TextureBonus" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer3"]
+visible = false
+layout_mode = 2
+texture = ExtResource("3_dtell")
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer3"]
+visible = false
+layout_mode = 2
+text = "Bonus Name"
+label_settings = SubResource("LabelSettings_4v32p")
+
 [node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 
 [node name="LifeBar" parent="MarginContainer/VBoxContainer/HBoxContainer2" instance=ExtResource("2_40qwv")]
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
