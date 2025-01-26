@@ -46,3 +46,4 @@ func _on_body_entered(body: Node2D) -> void:
 	else:
 		print("untracked collision bubble")
 		queue_free()
+#https://docs.google.com/document/d/1MC3z5er7EEdDEhm6o1rmyRJhiuY133UW6vSv2W86HhE/edit?usp=sharing
