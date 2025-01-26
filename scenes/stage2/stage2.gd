@@ -79,13 +79,13 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	# check player health
 	var id_winner = check_players_state()
-	id_winner =-1 #todelete
+	#id_winner =-1 #todelete
 	if id_winner != -1 && isResetNotTimerLaunched: 
 		var id_display_winner = id_winner+1
-		var txt_winner = "Joueur "+str(id_display_winner)+" a gagné !! Reset dans 10 secondes"
+		var txt_winner = "Joueur "+str(id_display_winner)+" a gagné !!"
 		$WinnerPanel.setup_text(txt_winner)
 		$WinnerPanel.visible=true
-		reset_timer.start(4.0)
+		reset_timer.start(5.0)
 		isResetNotTimerLaunched = false
 	update_players_gui()
 		

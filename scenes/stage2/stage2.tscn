@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://bmau1vr8akkpp"]
+[gd_scene load_steps=20 format=3 uid="uid://bmau1vr8akkpp"]
 
 [ext_resource type="Script" path="res://scenes/stage2/stage2.gd" id="1_gxxay"]
 [ext_resource type="AudioStream" uid="uid://cb54mtjcxbve7" path="res://music/vitamine-coin-loop.mp3" id="2_3gqv0"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://deeyxes5np8ov" path="res://assets/stage2/bayou-Sheetv3.png" id="9_fedjo"]
 [ext_resource type="Shader" path="res://scenes/main/raylight.gdshader" id="11_lwdah"]
 [ext_resource type="PackedScene" uid="uid://dkqeml1ukrwrk" path="res://scenes/interfaces/player_HUD.tscn" id="12_hf3ke"]
+[ext_resource type="PackedScene" uid="uid://b04a65tqnnypo" path="res://scenes/interfaces/winner_panel.tscn" id="12_kkvxs"]
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_drb20"]
 noise_type = 0
@@ -205,3 +206,9 @@ position = Vector2(200, 100)
 
 [node name="MarkEvent9" type="Marker2D" parent="EventsMarker"]
 position = Vector2(200, 550)
+
+[node name="WinnerPanel" parent="." instance=ExtResource("12_kkvxs")]
+offset_left = 543.0
+offset_top = 287.0
+offset_right = 543.0
+offset_bottom = 287.0

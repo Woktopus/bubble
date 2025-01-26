@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://crpdb4k3aa78o"]
+[gd_scene load_steps=25 format=3 uid="uid://crpdb4k3aa78o"]
 
 [ext_resource type="Script" path="res://scenes/main/main.gd" id="1_2h74v"]
 [ext_resource type="Texture2D" uid="uid://c6kqboj4yhlom" path="res://scenes/main/Screenshot-2021-12-28-122056.png" id="1_hynuu"]
@@ -12,6 +12,7 @@
 [ext_resource type="Script" path="res://scenes/main/powerupspawner.gd" id="8_cve56"]
 [ext_resource type="PackedScene" uid="uid://dkqeml1ukrwrk" path="res://scenes/interfaces/player_HUD.tscn" id="8_mfo83"]
 [ext_resource type="Shader" path="res://scenes/main/raylight.gdshader" id="9_ci8hw"]
+[ext_resource type="PackedScene" uid="uid://b04a65tqnnypo" path="res://scenes/interfaces/winner_panel.tscn" id="13_vvdpb"]
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_drb20"]
 noise_type = 0
@@ -241,3 +242,10 @@ position = Vector2(200, 100)
 
 [node name="MarkEvent9" type="Marker2D" parent="EventsMarker"]
 position = Vector2(200, 550)
+
+[node name="WinnerPanel" parent="." instance=ExtResource("13_vvdpb")]
+visible = false
+offset_left = 538.0
+offset_top = 313.0
+offset_right = 538.0
+offset_bottom = 313.0
