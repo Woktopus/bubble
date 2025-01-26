@@ -42,7 +42,7 @@ func _process(delta: float) -> void:
 	if is_initialized and player > -1:
 		time_since_init += delta
 		if time_since_init > leave_check_delay:
-			if input.is_action_just_pressed("join"):
+			if input.is_action_just_pressed("leave"):
 				print("leave")
 				emit_signal("leave", player)
 				return
