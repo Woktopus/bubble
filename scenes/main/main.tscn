@@ -125,9 +125,6 @@ visible = false
 position = Vector2(1105, 328)
 shape = SubResource("RectangleShape2D_twcly")
 
-[node name="Powerup" parent="." instance=ExtResource("5_7clre")]
-position = Vector2(766, 248)
-
 [node name="markerp1" type="Marker2D" parent="."]
 visible = false
 position = Vector2(986, 172)
