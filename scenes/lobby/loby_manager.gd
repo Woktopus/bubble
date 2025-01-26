@@ -111,6 +111,8 @@ func start_game():
 		print("start game")
 		GameData.player_data = player_data
 
-		get_tree().change_scene_to_file("res://scenes/main/main.tscn")
+		#get_tree().change_scene_to_file("res://scenes/main/main.tscn")
+		
+		get_tree().change_scene_to_file("res://scenes/stage2/stage2.tscn")
 	else:
 		print("not enough players")
