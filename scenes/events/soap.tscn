@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://dxgugwfmxvm73"]
+
+[ext_resource type="Texture2D" uid="uid://vxaobscdxpqk" path="res://assets/soap.png" id="1_s1w0u"]
+[ext_resource type="Script" path="res://scenes/events/soap.gd" id="1_xn2sp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xpiqg"]
+size = Vector2(28, 18.6667)
+
+[node name="Soap" type="Area2D"]
+scale = Vector2(1.5, 1.5)
+script = ExtResource("1_xn2sp")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_s1w0u")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.666667, 0)
+shape = SubResource("RectangleShape2D_xpiqg")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
