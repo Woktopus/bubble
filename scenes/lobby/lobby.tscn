@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://diaen2m1et70t"]
+[gd_scene load_steps=7 format=3 uid="uid://diaen2m1et70t"]
 
 [ext_resource type="Script" path="res://scenes/lobby/lobby.gd" id="1_lrhhc"]
 [ext_resource type="PackedScene" uid="uid://doka6pvyae620" path="res://scenes/lobby/lobby_player.tscn" id="2_peqk2"]
 [ext_resource type="Script" path="res://scenes/lobby/loby_manager.gd" id="2_tc88q"]
 [ext_resource type="AudioStream" uid="uid://c2b7koki55sn8" path="res://music/music lobby.mp3" id="4_kl2m6"]
 [ext_resource type="AudioStream" uid="uid://deh1w118xqad6" path="res://sounds/075176_duck-quack-40345.mp3" id="5_fip16"]
+[ext_resource type="FontFile" uid="uid://qalmecrbkxyp" path="res://addons/input_prompt_icon_font/icon.ttf" id="6_al2lj"]
 
 [node name="Lobby" type="Node"]
 script = ExtResource("1_lrhhc")
@@ -52,10 +53,25 @@ size_flags_vertical = 3
 [node name="LobbyPlayer" parent="Control/MarginContainer/GridContainer/VBoxP1" instance=ExtResource("2_peqk2")]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="Control/MarginContainer/GridContainer/VBoxP1"]
+[node name="hboxp1pressA" type="HBoxContainer" parent="Control/MarginContainer/GridContainer/VBoxP1"]
 layout_mode = 2
-text = "Press A To enter"
+size_flags_horizontal = 4
+
+[node name="Label2" type="Label" parent="Control/MarginContainer/GridContainer/VBoxP1/hboxp1pressA"]
+layout_mode = 2
+text = "Press"
+
+[node name="LabelIconp1" type="Label" parent="Control/MarginContainer/GridContainer/VBoxP1/hboxp1pressA"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0.858824, 0, 1)
+theme_override_fonts/font = ExtResource("6_al2lj")
+theme_override_font_sizes/font_size = 40
+text = "xbox_button_a_outline"
 horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="Control/MarginContainer/GridContainer/VBoxP1/hboxp1pressA"]
+layout_mode = 2
+text = "to play"
 
 [node name="VBoxP2" type="VBoxContainer" parent="Control/MarginContainer/GridContainer"]
 layout_mode = 2
@@ -65,10 +81,25 @@ size_flags_vertical = 3
 [node name="LobbyPlayer" parent="Control/MarginContainer/GridContainer/VBoxP2" instance=ExtResource("2_peqk2")]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="Control/MarginContainer/GridContainer/VBoxP2"]
+[node name="hboxp2pressA" type="HBoxContainer" parent="Control/MarginContainer/GridContainer/VBoxP2"]
 layout_mode = 2
-text = "Press A To enter"
+size_flags_horizontal = 4
+
+[node name="Label2" type="Label" parent="Control/MarginContainer/GridContainer/VBoxP2/hboxp2pressA"]
+layout_mode = 2
+text = "Press"
+
+[node name="LabelIconp2" type="Label" parent="Control/MarginContainer/GridContainer/VBoxP2/hboxp2pressA"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0.858824, 0, 1)
+theme_override_fonts/font = ExtResource("6_al2lj")
+theme_override_font_sizes/font_size = 40
+text = "xbox_button_a_outline"
 horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="Control/MarginContainer/GridContainer/VBoxP2/hboxp2pressA"]
+layout_mode = 2
+text = "to play"
 
 [node name="VBoxP3" type="VBoxContainer" parent="Control/MarginContainer/GridContainer"]
 layout_mode = 2
@@ -78,10 +109,25 @@ size_flags_vertical = 3
 [node name="LobbyPlayer" parent="Control/MarginContainer/GridContainer/VBoxP3" instance=ExtResource("2_peqk2")]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="Control/MarginContainer/GridContainer/VBoxP3"]
+[node name="hboxp3pressA" type="HBoxContainer" parent="Control/MarginContainer/GridContainer/VBoxP3"]
 layout_mode = 2
-text = "Press A To enter"
+size_flags_horizontal = 4
+
+[node name="Label2" type="Label" parent="Control/MarginContainer/GridContainer/VBoxP3/hboxp3pressA"]
+layout_mode = 2
+text = "Press"
+
+[node name="LabelIconp3" type="Label" parent="Control/MarginContainer/GridContainer/VBoxP3/hboxp3pressA"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0.858824, 0, 1)
+theme_override_fonts/font = ExtResource("6_al2lj")
+theme_override_font_sizes/font_size = 40
+text = "xbox_button_a_outline"
 horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="Control/MarginContainer/GridContainer/VBoxP3/hboxp3pressA"]
+layout_mode = 2
+text = "to play"
 
 [node name="VBoxP4" type="VBoxContainer" parent="Control/MarginContainer/GridContainer"]
 layout_mode = 2
@@ -91,7 +137,22 @@ size_flags_vertical = 3
 [node name="LobbyPlayer" parent="Control/MarginContainer/GridContainer/VBoxP4" instance=ExtResource("2_peqk2")]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="Control/MarginContainer/GridContainer/VBoxP4"]
+[node name="hboxp4pressA" type="HBoxContainer" parent="Control/MarginContainer/GridContainer/VBoxP4"]
 layout_mode = 2
-text = "Press A To enter"
+size_flags_horizontal = 4
+
+[node name="Label2" type="Label" parent="Control/MarginContainer/GridContainer/VBoxP4/hboxp4pressA"]
+layout_mode = 2
+text = "Press"
+
+[node name="LabelIconp4" type="Label" parent="Control/MarginContainer/GridContainer/VBoxP4/hboxp4pressA"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0.858824, 0, 1)
+theme_override_fonts/font = ExtResource("6_al2lj")
+theme_override_font_sizes/font_size = 40
+text = "xbox_button_a_outline"
 horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="Control/MarginContainer/GridContainer/VBoxP4/hboxp4pressA"]
+layout_mode = 2
+text = "to play"
