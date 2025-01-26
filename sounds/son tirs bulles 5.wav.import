@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bqhks1vtxen31"
+path="res://.godot/imported/son tirs bulles 5.wav-a5636763849142b4d8450076360b73c3.sample"
+
+[deps]
+
+source_file="res://sounds/son tirs bulles 5.wav"
+dest_files=["res://.godot/imported/son tirs bulles 5.wav-a5636763849142b4d8450076360b73c3.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
