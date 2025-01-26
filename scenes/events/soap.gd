@@ -21,6 +21,8 @@ func start_soap():
 	position = marker_source.global_position
 	destination_position = marker_destination.global_position
 	is_moving = true
+	$AudioStreamPlayer2D.play()
+	
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
